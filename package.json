@@ -1,0 +1,11 @@
+{
+  "name": "proy-final-slides",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Procesador MIPS de 32 bits monociclo - Web interactiva y simulador RTL",
+  "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build": "cd web && npm install && npm run build",
+    "preview": "npm --prefix web run preview"
+  }
+}
