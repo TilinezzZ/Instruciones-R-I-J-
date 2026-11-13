@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import type { DatapathComponent } from '../data/components'
 import type { WirePath } from '../data/wires'
-import type { AppMode } from './Navbar'
 import { Info, ZoomIn, ZoomOut, Maximize2 } from 'lucide-react'
 import { sounds } from '../utils/audio'
+
+export type AppMode = 'learn' | 'challenge' | 'simulate'
 
 interface DatapathCanvasProps {
   mode: AppMode

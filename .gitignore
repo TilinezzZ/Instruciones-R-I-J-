@@ -22,6 +22,8 @@ vsim.wlf
 *.log
 *.jou
 *.pb
+*.cr.mti
+*.mpf
 
 # OS files
 .DS_Store
