@@ -1,5 +1,5 @@
 // ============================================================================
-// Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+// Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 // Módulo: shift_left_2 (Desplazador lógico a la izquierda de 2 bits parametrizado)
 // Utilizado para:
 //   - Shift Left (branch): IN_WIDTH=32, OUT_WIDTH=32

@@ -110,7 +110,7 @@ export const DatapathDiagram: React.FC<DatapathDiagramProps> = ({
       return isLight ? '#cbd5e1' : '#1e293b'
     }
     // Código de color consistente pedido por el usuario:
-    // Señales de control: azul claro (como en diapositiva 17)
+    // Señales de control: azul claro
     // Cables de datos: cian
     if (wire.isControl || wire.colorType === 'control') {
       return '#38bdf8' // azul claro brillante (cyan-400 / sky-400)

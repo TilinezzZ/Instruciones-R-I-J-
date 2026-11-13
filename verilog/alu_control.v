@@ -1,5 +1,5 @@
 // ============================================================================
-// Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+// Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 // Módulo: ALU Control
 // ============================================================================
 `timescale 1ns / 1ps

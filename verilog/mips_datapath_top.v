@@ -1,7 +1,7 @@
 // ============================================================================
-// Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+// Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 // Módulo: mips_datapath_top (Datapath Completo Integrado)
-// Seminario de Solución de Problemas de Arquitectura de Computadoras - CUCEI
+// Arquitectura de Computadoras
 // ============================================================================
 `timescale 1ns / 1ps
 
@@ -65,7 +65,7 @@ module mips_datapath_top (
     assign jump_target_32 = {pc_plus_4[31:28], jump_addr_28};
 
     // ========================================================================
-    // INSTANCIACIÓN DE LOS 18 COMPONENTES (DIAPOSITIVA 17)
+    // INSTANCIACIÓN DE LOS 18 COMPONENTES (DATAPATH COMPLETO)
     // ========================================================================
 
     // Componente 1: PC (Contador de Programa)

@@ -1,9 +1,8 @@
 # Módulos Verilog y Simulación en ModelSim
 
-Procesador MIPS de 32 bits de un solo ciclo fiel al diagrama RTL de la **Diapositiva 17** ("Datapath Completo").
+Procesador MIPS de 32 bits de un solo ciclo ("Datapath Completo").
 
-Seminario de Solución de Problemas de Arquitectura de Computadoras  
-**Universidad de Guadalajara (CUCEI)**
+Arquitectura de Computadoras
 
 ---
 

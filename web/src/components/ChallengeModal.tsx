@@ -56,7 +56,7 @@ export const ChallengeModal: React.FC<ChallengeModalProps> = ({
             ¡Datapath Completo Armado!
           </h3>
           <p className="text-xs text-amber-300/80 mt-1 font-mono">
-            Rango: Arquitecto MIPS Nivel Experto · CUCEI
+            Rango: Arquitecto MIPS Nivel Experto
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export const ChallengeModal: React.FC<ChallengeModalProps> = ({
         </div>
 
         <p className="text-xs text-slate-300 leading-relaxed bg-slate-950/60 p-3 rounded-xl border border-slate-800">
-          Has conectado correctamente los 18 componentes del procesador MIPS monociclo fiel a la diapositiva 17. ¡Tu procesador está listo para simular instrucciones!
+          Has conectado correctamente los 18 componentes del procesador MIPS monociclo. ¡Tu procesador está listo para simular instrucciones!
         </p>
 
         {/* Acciones */}

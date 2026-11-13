@@ -1,5 +1,5 @@
 // ============================================================================
-// Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+// Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 // Módulo: Memoria de Datos (RAM síncrona en escritura, asíncrona en lectura)
 // ============================================================================
 `timescale 1ns / 1ps

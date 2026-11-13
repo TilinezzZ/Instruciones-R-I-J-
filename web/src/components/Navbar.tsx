@@ -83,11 +83,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             <div className="flex items-center gap-2">
               <span className="text-sm sm:text-base font-extrabold tracking-tight font-mono">
-                MIPS 32-bit <span className="text-cyan-400 text-xs px-1.5 py-0.2 rounded bg-cyan-950/80 border border-cyan-700/50">Diap. 17-27</span>
+                MIPS 32-bit
               </span>
             </div>
             <p className="text-[10px] text-slate-400 hidden sm:block">
-              Arquitectura de Computadoras · CUCEI
+              Procesador Monociclo
             </p>
           </div>
         </div>

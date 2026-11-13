@@ -502,7 +502,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
                 <th className="px-3 py-2.5 text-center">funct [5:0]</th>
                 <th className="px-3 py-2.5 text-center">Acción ALU</th>
                 <th className="px-3 py-2.5 text-center text-purple-300 font-bold">Control (4 bits · Diap. 23)</th>
-                <th className="px-3 py-2.5 text-center text-slate-400">Control (3 bits · Diap. 17)</th>
+                <th className="px-3 py-2.5 text-center text-slate-400">Control (3 bits · RTL)</th>
                 <th className="px-4 py-2.5">Descripción de la Operación</th>
               </tr>
             </thead>

@@ -51,7 +51,7 @@ export const ControlUnitTable: React.FC<ControlUnitTableProps> = ({
                 Tabla de Señales de la Unidad de Control
               </h3>
               <p className="text-xs text-slate-400">
-                Lógica de decodificación para el procesador monociclo MIPS (Diapositiva 17)
+                Lógica de decodificación para el procesador monociclo MIPS
               </p>
             </div>
           </div>

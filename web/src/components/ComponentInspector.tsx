@@ -109,7 +109,7 @@ export const ComponentInspector: React.FC<ComponentInspectorProps> = ({
 
               <div>
                 <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">
-                  Propósito en el Datapath de la Diapositiva 17
+                  Propósito en el Datapath Completo
                 </h4>
                 <p className="text-sm text-slate-200 leading-relaxed bg-slate-950/40 p-3.5 rounded-xl border border-slate-800">
                   {component.purpose}

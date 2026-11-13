@@ -1,5 +1,5 @@
 // ============================================================================
-// Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+// Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 // Módulo: Banco de Registros (32 registros de 32 bits)
 // ============================================================================
 `timescale 1ns / 1ps

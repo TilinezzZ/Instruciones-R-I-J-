@@ -24,7 +24,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                 Acerca del Proyecto y Guía de Uso
               </h3>
               <p className="text-xs text-slate-400">
-                Seminario de Solución de Problemas de Arquitectura de Computadoras
+                Procesador Monociclo MIPS de 32 bits
               </p>
             </div>
           </div>
@@ -54,7 +54,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                   1
                 </span>
                 <p>
-                  <strong className="text-white">Arma el Datapath:</strong> En la paleta inferior encontrarás los 18 componentes exactos del procesador de la diapositiva 17. Arrástralos al lienzo o haz clic en una pieza y luego en su slot para encajarla.
+                  <strong className="text-white">Arma el Datapath:</strong> En la paleta inferior encontrarás los 18 componentes del datapath completo. Arrástralos al lienzo o haz clic en una pieza y luego en su slot para encajarla.
                 </p>
               </div>
 
@@ -97,18 +97,18 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
               <div className="flex items-center gap-2">
                 <Cpu className="h-4 w-4 text-cyan-400" />
                 <span className="text-xs font-bold text-white font-mono">
-                  Universidad de Guadalajara · CUCEI
+                  Procesador MIPS 32-bit Monociclo
                 </span>
               </div>
               <p className="text-xs text-slate-400">
-                Proyecto Final: Procesador MIPS de 32 bits de un solo ciclo (Diapositiva 17: "Datapath Completo").
+                Proyecto Final: Procesador MIPS de 32 bits de un solo ciclo ("Datapath Completo").
               </p>
               <div className="text-xs text-slate-300 pt-1 space-y-1">
                 <p>
                   • <strong className="text-white">Módulo Datapath & Plataforma Web Interactiva:</strong> Simulación RTL en Verilog, ModelSim y Aplicación Web Interactiva de Rompecabezas.
                 </p>
                 <p>
-                  • <strong className="text-white">Equipo de 3 integrantes</strong> del Seminario de Solución de Problemas de Arquitectura de Computadoras.
+                  • <strong className="text-white">Equipo de 3 integrantes</strong> · Arquitectura de Computadoras.
                 </p>
               </div>
             </div>

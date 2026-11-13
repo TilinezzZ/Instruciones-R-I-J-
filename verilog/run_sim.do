@@ -1,7 +1,7 @@
 # ==============================================================================
-# Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+# Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 # Script de Automatización para ModelSim / QuestaSim (run_sim.do)
-# Seminario de Solución de Problemas de Arquitectura de Computadoras - CUCEI
+# Arquitectura de Computadoras
 # ==============================================================================
 
 # 1. Crear y mapear librería de trabajo

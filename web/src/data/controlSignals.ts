@@ -1,6 +1,6 @@
 // ============================================================================
 // Datos de la Unidad de Control (Diapositivas 18, 19, 23, 24)
-// Seminario de Solución de Problemas de Arquitectura de Computadoras - CUCEI
+// Arquitectura de Computadoras - MIPS 32-bit
 // ============================================================================
 
 export interface SignalTooltip {
@@ -54,7 +54,7 @@ export const CONTROL_SIGNALS_INFO: Record<string, SignalTooltip> = {
     whenZero: 'No se modifica ningún registro del Banco de Registros.',
     whenOne: 'El dato en DW se escribe en el registro AW en el flanco de subida del reloj.',
     description: 'Permite la escritura en el Banco de Registros.',
-    slide17Note: 'DISCREPANCIA: En la Diapositiva 17 aparece etiquetada como "en_BR" (Enable Banco de Registros), mientras que en las diapositivas 18 a 22 se le llama "RegWrite". Son exactamente la misma señal lógica.'
+    slide17Note: 'DISCREPANCIA: En el Diagrama RTL principal aparece etiquetada como "en_BR" (Enable Banco de Registros), mientras que en las diapositivas 18 a 22 se le llama "RegWrite". Son exactamente la misma señal lógica.'
   },
   MemRead: {
     name: 'MemRead',
@@ -378,7 +378,7 @@ export const CONTROL_UNIT_QUIZ: QuizQuestion[] = [
   },
   {
     id: 4,
-    question: '¿Qué diferencia existe entre la señal "en_BR" de la Diapositiva 17 y "RegWrite" de las Diapositivas 18-22?',
+    question: '¿Qué diferencia existe entre la señal "en_BR" del Diagrama RTL y "RegWrite" de las Diapositivas 18-22?',
     options: [
       { label: 'A', text: 'Son señales completamente distintas con diferente función', correct: false },
       { label: 'B', text: 'Son exactamente la misma señal de habilitación de escritura en registros con diferente nombre', correct: true },

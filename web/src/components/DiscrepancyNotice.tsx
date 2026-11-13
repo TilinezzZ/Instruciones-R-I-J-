@@ -13,15 +13,15 @@ export const DISCREPANCIES: DiscrepancyItem[] = [
   {
     id: 'en_br_vs_regwrite',
     title: 'Señal en_BR vs RegWrite',
-    slideRef: 'Diapositiva 17 vs Diapositivas 18-22',
-    detectedIssue: 'La Diapositiva 17 etiqueta la señal de habilitación de escritura en registros como "en_BR" (Enable Banco de Registros), mientras que las Diapositivas 18 a 22 emplean la nomenclatura estándar en inglés "RegWrite".',
+    slideRef: 'Diagrama RTL vs Diapositivas 18-22',
+    detectedIssue: 'El Diagrama RTL principal etiqueta la señal de habilitación de escritura en registros como "en_BR" (Enable Banco de Registros), mientras que las Diapositivas 18 a 22 emplean la nomenclatura estándar en inglés "RegWrite".',
     solutionApplied: 'En toda la plataforma se presentan como equivalentes: en_BR ≡ RegWrite. Se preserva en_BR para concordar con el dibujo RTL original y se aclara que activa la escritura en el Banco de Registros.'
   },
   {
     id: 'alu_control_bits',
     title: 'Ancho de bits de ALU Control (3 bits vs 4 bits)',
-    slideRef: 'Diapositiva 17 vs Diapositiva 23',
-    detectedIssue: 'La Diapositiva 17 dibuja la línea de control que alimenta a la ALU con 3 bits (010, 110, etc.), mientras que la tabla formal de ALU Control en la Diapositiva 23 utiliza códigos de 4 bits (0010, 0110, 0000, 0001, 0111).',
+    slideRef: 'Diagrama RTL vs Diapositiva 23',
+    detectedIssue: 'El Diagrama RTL principal dibuja la línea de control que alimenta a la ALU con 3 bits (010, 110, etc.), mientras que la tabla formal de ALU Control en la Diapositiva 23 utiliza códigos de 4 bits (0010, 0110, 0000, 0001, 0111).',
     solutionApplied: 'Se adoptan formalmente los 4 bits de la tabla de la Diapositiva 23 (0010 para ADD, 0110 para SUB, etc.) y se muestra en la inspección la correlación directa con los 3 bits menos significativos del diagrama RTL.'
   },
   {
@@ -58,7 +58,7 @@ export const DiscrepancyNotice: React.FC<DiscrepancyNoticeProps> = ({ filterId }
         <div className="flex items-center gap-2 text-amber-400 font-semibold">
           <AlertTriangle className="h-4 w-4 shrink-0 text-amber-400" />
           <span>
-            Fe de Erratas y Discrepancias Académicas (Diapositivas 17 a 27)
+            Fe de Erratas y Discrepancias Académicas
           </span>
           <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-900/40 text-amber-300">
             {items.length} notas

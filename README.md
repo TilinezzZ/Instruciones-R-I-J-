@@ -1,8 +1,7 @@
-# 🧠 Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+# 🧠 Procesador MIPS Monociclo de 32 bits
 ### Rompecabezas Interactivo, Simulador Visual y Diseño RTL en Verilog
 
-Proyecto final desarrollado para el **Seminario de Solución de Problemas de Arquitectura de Computadoras**  
-**Universidad de Guadalajara · Centro Universitario de Ciencias Exactas e Ingenierías (CUCEI)**
+Proyecto final: **Arquitectura de Computadoras**
 
 [![Vercel Deployment](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/TilinezzZ/ProyFinalSlides)
@@ -14,7 +13,7 @@ Proyecto final desarrollado para el **Seminario de Solución de Problemas de Arq
 
 ## 🌟 Descripción del Proyecto
 
-Este proyecto aborda la comprensión, diseño e implementación del **Datapath Completo Monociclo de 32 bits** fiel al esquema de la **Diapositiva 17** del curso. El trabajo se divide en dos fases fundamentales:
+Este proyecto aborda la comprensión, diseño e implementación del **Datapath Completo Monociclo de 32 bits**. El trabajo se divide en dos fases fundamentales:
 
 1. **Plataforma Web Interactiva (Estilo Rompecabezas y Simulador Visual):**
    - Una aplicación moderna donde el usuario aprende la arquitectura de computadoras arrastrando y encajando los 18 componentes del procesador.
@@ -114,8 +113,7 @@ npm run build
 
 ## 👥 Créditos del Equipo (3 Integrantes)
 
-- **Universidad de Guadalajara · CUCEI**
-- **Materia:** Seminario de Solución de Problemas de Arquitectura de Computadoras
+- **Materia:** Arquitectura de Computadoras
 - **Desarrollo del Datapath Monociclo & Web Interactiva:**
   - Módulos RTL Verilog y scripts de simulación ModelSim
   - Aplicación Web interactiva en Vite, React, TypeScript y Tailwind CSS

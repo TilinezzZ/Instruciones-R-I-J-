@@ -142,7 +142,7 @@ export const DatapathView: React.FC<DatapathViewProps> = ({
             setChallengeModalOpen(true)
           } else {
             sounds.playVictory()
-            showFeedback('¡Felicidades! Has completado el datapath completo de la diapositiva 17.', 'success')
+            showFeedback('¡Felicidades! Has completado el datapath completo del procesador.', 'success')
           }
         } else {
           showFeedback(`¡Correcto! ${droppedComp.name} encajó en su lugar.`, 'success')

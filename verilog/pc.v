@@ -1,7 +1,7 @@
 // ============================================================================
-// Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+// Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 // Módulo: PC (Program Counter)
-// Seminario de Solución de Problemas de Arquitectura de Computadoras - CUCEI
+// Arquitectura de Computadoras
 // ============================================================================
 `timescale 1ns / 1ps
 

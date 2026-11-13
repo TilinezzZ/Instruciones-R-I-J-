@@ -1,5 +1,5 @@
 // ============================================================================
-// Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+// Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 // Módulo: Sign Ext (Extensión de signo 16 a 32 bits)
 // ============================================================================
 `timescale 1ns / 1ps

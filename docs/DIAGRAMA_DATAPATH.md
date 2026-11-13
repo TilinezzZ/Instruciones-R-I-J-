@@ -1,13 +1,12 @@
-# Arquitectura RTL del Datapath MIPS de 32 bits (Diapositiva 17)
+# Arquitectura RTL del Datapath MIPS de 32 bits (Datapath Completo)
 
-**Seminario de Solución de Problemas de Arquitectura de Computadoras**  
-**Universidad de Guadalajara · CUCEI**
+**Arquitectura de Computadoras**
 
 ---
 
 ## 🏛️ Descripción General
 
-El procesador implementado corresponde a una arquitectura monociclo basada en el diseño clásico de David A. Patterson y John L. Hennessy, específicamente la versión integrada de la **Diapositiva 17 ("Datapath Completo")**. En esta arquitectura, cada instrucción se ejecuta en un único ciclo de reloj (`CPI = 1`), coordinando el flujo de datos entre 18 componentes funcionales interconectados mediante buses de datos, direcciones y líneas de control.
+El procesador implementado corresponde a una arquitectura monociclo basada en el diseño clásico de David A. Patterson y John L. Hennessy, específicamente la versión integrada del **"Datapath Completo"**. En esta arquitectura, cada instrucción se ejecuta en un único ciclo de reloj (`CPI = 1`), coordinando el flujo de datos entre 18 componentes funcionales interconectados mediante buses de datos, direcciones y líneas de control.
 
 ```mermaid
 flowchart LR

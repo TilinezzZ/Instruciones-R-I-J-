@@ -1,7 +1,7 @@
 // ============================================================================
-// Proyecto: Procesador MIPS Monociclo de 32 bits (Diapositiva 17)
+// Proyecto: Procesador MIPS Monociclo de 32 bits (Datapath Completo)
 // Testbench: tb_mips_datapath_top (Simulación del Datapath Completo)
-// Seminario de Solución de Problemas de Arquitectura de Computadoras - CUCEI
+// Arquitectura de Computadoras
 // ============================================================================
 `timescale 1ns / 1ps
 
@@ -49,8 +49,7 @@ module tb_mips_datapath_top;
 
     initial begin
         $display("====================================================================");
-        $display("INICIANDO SIMULACION DEL DATAPATH COMPLETO MIPS 32-BIT (SLIDE 17)");
-        $display("Universidad de Guadalajara - CUCEI");
+        $display("INICIANDO SIMULACION DEL DATAPATH COMPLETO MIPS 32-BIT");
         $display("====================================================================");
 
         // Inicialización

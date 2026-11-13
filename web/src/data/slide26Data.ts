@@ -1,6 +1,6 @@
 // ============================================================================
 // Datos iniciales de la Diapositiva 26 (Tablas de Registros y Memoria)
-// Seminario de Solución de Problemas de Arquitectura de Computadoras - CUCEI
+// Arquitectura de Computadoras - MIPS 32-bit
 // ============================================================================
 
 export interface RegisterEntry {
