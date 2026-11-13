@@ -17,17 +17,17 @@ Este proyecto aborda la comprensión, diseño e implementación del **Datapath C
 
 1. **Plataforma Web Interactiva (Estilo Rompecabezas y Simulador Visual):**
    - Una aplicación moderna donde el usuario aprende la arquitectura de computadoras arrastrando y encajando los 18 componentes del procesador.
-   - **Vistas Especializadas por Diapositiva:**
+   - **Vistas Especializadas del Procesador:**
      - `/` (**Datapath Completo**): Rompecabezas interactivo con Modo Aprender y Modo Reto (cronómetro y puntuación).
-     - `/control` (**Unidad de Control** · Diapositivas 18, 19, 23 y 24): Diagrama RTL con tooltip interactivo de señales, Tabla de Señales de Control (0, 1, X), Tabla de Verdad de Opcodes, Tabla de ALU Control (4 bits), Modo Decodificador interactivo y Mini-Quiz formativo.
-     - `/tipo-r` (**Instrucción Tipo R** · Diapositiva 20): Simulación paso a paso de los 9 pasos del ciclo, formato de instrucción campo a campo, componentes inactivos atenuados y calculadora interactiva de operandos/funct.
-     - `/lw` (**Instrucción LW y SW** · Diapositivas 21, 26 y 27): Visualización y edición interactiva de las tablas de Banco de Registros (7 a 17) y Memoria de Datos (20 a 30) de la Diapositiva 26 con animación de transferencia de datos.
-     - `/tipo-j` (**Tipo J y Saltos** · Diapositivas 22 y 28): Desglose de concatenación `{PC+4[31:28], target<<2}`, calculadora de salto absoluto y simulación interactiva del bucle con `beq` y `j`.
+     - `/control` (**Unidad de Control**): Diagrama RTL con tooltip interactivo de señales, Tabla de Señales de Control (0, 1, X), Tabla de Verdad de Opcodes, Tabla de ALU Control (4 bits), Modo Decodificador interactivo y Mini-Quiz formativo.
+     - `/tipo-r` (**Instrucción Tipo R**): Simulación paso a paso de los 9 pasos del ciclo, formato de instrucción campo a campo, componentes inactivos atenuados y calculadora interactiva de operandos/funct.
+     - `/lw` (**Instrucción LW y SW**): Visualización y edición interactiva de las tablas de Banco de Registros (7 a 17) y Memoria de Datos (20 a 30) con animación de transferencia de datos.
+     - `/tipo-j` (**Tipo J y Saltos**): Desglose de concatenación `{PC+4[31:28], target<<2}`, calculadora de salto absoluto y simulación interactiva del bucle con `beq` y `j`.
      - `/comparar` (**Comparador Lado a Lado**): Análisis diferencial simultáneo entre cualesquiera dos instrucciones con matriz de señales y diagramas paralelos.
    - **Soporte de Tema:** Modo Oscuro ("Placa de Circuito" neón) y Modo Claro.
    - **Selector Global de Instrucción:** Resalta en vivo el camino de datos correspondiente (`R`, `lw`, `sw`, `beq`, `j`).
    - **Panel Inspector Técnico:** Al pulsar cualquier pieza, se detallan sus entradas y salidas con ancho en bits, su propósito RTL, las instrucciones en las que participa y su código Verilog sintetizable.
-   - **Fe de Erratas y Discrepancias Académicas:** Documentación interactiva de las notas entre diapositivas (`en_BR` vs `RegWrite`, 3 vs 4 bits de ALU Control, errata de sintaxis de SW en Diapositiva 27 y de LW en Diapositiva 25).
+   - **Fe de Erratas y Notas Académicas:** Documentación interactiva de las convenciones arquitectónicas (`en_BR` vs `RegWrite`, 3 vs 4 bits de ALU Control, notas de sintaxis de SW y LW).
 
 2. **Diseño RTL en Verilog y Simulación en ModelSim (`/verilog`):**
    - 13 módulos Verilog parametrizados y documentados en español, respetando exactamente los nombres de puertos y señales (`AR1`, `AR2`, `AW`, `DR1`, `DR2`, `DW`, `en_BR`, `zf`, etc.).

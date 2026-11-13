@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { DatapathDiagram } from '../components/DatapathDiagram'
-import { SLIDE_26_REGISTERS, SLIDE_26_MEMORY, type RegisterEntry, type MemoryEntry } from '../data/slide26Data'
+import { INITIAL_LW_REGISTERS, INITIAL_LW_MEMORY, type RegisterEntry, type MemoryEntry } from '../data/slide26Data'
 import { DiscrepancyNotice } from '../components/DiscrepancyNotice'
 import {
   Database,
@@ -26,9 +26,9 @@ export const LwView: React.FC<LwViewProps> = ({ theme = 'dark' }) => {
   // Alternar entre modo LW (Load Word) y SW (Store Word)
   const [operationMode, setOperationMode] = useState<'lw' | 'sw'>('lw')
 
-  // Estado editable de las tablas de la Diapositiva 26
-  const [registers, setRegisters] = useState<RegisterEntry[]>(SLIDE_26_REGISTERS)
-  const [memory, setMemory] = useState<MemoryEntry[]>(SLIDE_26_MEMORY)
+  // Estado editable de las tablas
+  const [registers, setRegisters] = useState<RegisterEntry[]>(INITIAL_LW_REGISTERS)
+  const [memory, setMemory] = useState<MemoryEntry[]>(INITIAL_LW_MEMORY)
 
   // Operandos seleccionados
   const [selectedRs, setSelectedRs] = useState<number>(16) // $s0 (valor 24)
@@ -146,11 +146,11 @@ export const LwView: React.FC<LwViewProps> = ({ theme = 'dark' }) => {
     }
   }
 
-  // Restablecer tablas al estado original de la diapositiva 26
+  // Restablecer tablas al estado original
   const handleResetTables = () => {
     sounds.playClick()
-    setRegisters(SLIDE_26_REGISTERS)
-    setMemory(SLIDE_26_MEMORY)
+    setRegisters(INITIAL_LW_REGISTERS)
+    setMemory(INITIAL_LW_MEMORY)
     setHighlightedReg(null)
     setHighlightedMemAddr(null)
   }
@@ -189,7 +189,7 @@ export const LwView: React.FC<LwViewProps> = ({ theme = 'dark' }) => {
               {operationMode === 'lw' ? 'Instrucción LW (Load Word)' : 'Instrucción SW (Store Word)'}
             </h2>
             <span className="text-xs font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800">
-              Diapositivas 21, 26 y 27
+              Transferencia de Memoria
             </span>
           </div>
           <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-3xl">
@@ -234,7 +234,7 @@ export const LwView: React.FC<LwViewProps> = ({ theme = 'dark' }) => {
         </div>
       </div>
 
-      {/* Discrepancia específica de Diapositiva 27 si está en SW */}
+      {/* Nota académica si está en SW */}
       {operationMode === 'sw' && (
         <DiscrepancyNotice filterId="sw_semantics_slide27" />
       )}
@@ -360,7 +360,7 @@ export const LwView: React.FC<LwViewProps> = ({ theme = 'dark' }) => {
         />
       </div>
 
-      {/* 4. VISUALIZACIÓN INTERACTIVA DE LAS TABLAS DE LA DIAPOSITIVA 26 */}
+      {/* 4. VISUALIZACIÓN INTERACTIVA DE LAS TABLAS */}
       <div className={`p-5 rounded-2xl border ${
         isLight ? 'bg-white border-slate-200' : 'bg-slate-900/80 border-slate-800'
       } space-y-4 shadow-xl`}>
@@ -368,7 +368,7 @@ export const LwView: React.FC<LwViewProps> = ({ theme = 'dark' }) => {
           <div className="flex items-center gap-2">
             <Table className="h-5 w-5 text-cyan-400" />
             <h3 className="text-base font-bold text-white font-mono">
-              Tablas de Estado de Registros y Memoria (Diapositiva 26)
+              Tablas de Estado de Registros y Memoria
             </h3>
           </div>
 
@@ -377,7 +377,7 @@ export const LwView: React.FC<LwViewProps> = ({ theme = 'dark' }) => {
               onClick={handleResetTables}
               className="px-3 py-1.5 text-xs font-mono rounded-lg bg-slate-950 border border-slate-800 text-slate-400 hover:text-white"
             >
-              Restablecer Valores Diapositiva 26
+              Restablecer Valores Iniciales
             </button>
             <button
               onClick={handleExecuteTransfer}
@@ -441,11 +441,11 @@ export const LwView: React.FC<LwViewProps> = ({ theme = 'dark' }) => {
           {memoryEntry ? (
             <span className="ml-2 text-emerald-400">➔ Valor en RAM = {memoryEntry.value}</span>
           ) : (
-            <span className="ml-2 text-amber-400">➔ Dirección fuera del rango [20..30] de la diapositiva</span>
+            <span className="ml-2 text-amber-400">➔ Dirección fuera del rango [20..30]</span>
           )}
         </div>
 
-        {/* Tablas lado a lado (Diapositiva 26) */}
+        {/* Tablas lado a lado */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* BANCO DE REGISTROS (7 a 17) */}
           <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2">

@@ -205,7 +205,7 @@ export const TypeRView: React.FC<TypeRViewProps> = ({ theme = 'dark' }) => {
               Instrucción Tipo R (Registro)
             </h2>
             <span className="text-xs font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800">
-              Diapositiva 20
+              Operación Registro-Registro
             </span>
           </div>
           <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-3xl">
@@ -221,7 +221,7 @@ export const TypeRView: React.FC<TypeRViewProps> = ({ theme = 'dark' }) => {
         </div>
       </div>
 
-      {/* 2. FORMATO DE LA INSTRUCCIÓN (Diapositiva 20) */}
+      {/* 2. FORMATO DE LA INSTRUCCIÓN */}
       <div className={`p-5 rounded-2xl border ${
         isLight ? 'bg-white border-slate-200' : 'bg-slate-900/80 border-slate-800'
       } space-y-3 shadow-xl`}>

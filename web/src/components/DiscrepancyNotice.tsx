@@ -4,7 +4,7 @@ import { AlertTriangle, ChevronDown, ChevronUp, BookOpen } from 'lucide-react'
 export interface DiscrepancyItem {
   id: string
   title: string
-  slideRef: string
+  sourceRef: string
   detectedIssue: string
   solutionApplied: string
 }
@@ -13,29 +13,29 @@ export const DISCREPANCIES: DiscrepancyItem[] = [
   {
     id: 'en_br_vs_regwrite',
     title: 'Señal en_BR vs RegWrite',
-    slideRef: 'Diagrama RTL vs Diapositivas 18-22',
-    detectedIssue: 'El Diagrama RTL principal etiqueta la señal de habilitación de escritura en registros como "en_BR" (Enable Banco de Registros), mientras que las Diapositivas 18 a 22 emplean la nomenclatura estándar en inglés "RegWrite".',
+    sourceRef: 'Diagrama RTL vs Estándar MIPS',
+    detectedIssue: 'El Diagrama RTL principal etiqueta la señal de habilitación de escritura en registros como "en_BR" (Enable Banco de Registros), mientras que las especificaciones estándar emplean la nomenclatura en inglés "RegWrite".',
     solutionApplied: 'En toda la plataforma se presentan como equivalentes: en_BR ≡ RegWrite. Se preserva en_BR para concordar con el dibujo RTL original y se aclara que activa la escritura en el Banco de Registros.'
   },
   {
     id: 'alu_control_bits',
     title: 'Ancho de bits de ALU Control (3 bits vs 4 bits)',
-    slideRef: 'Diagrama RTL vs Diapositiva 23',
-    detectedIssue: 'El Diagrama RTL principal dibuja la línea de control que alimenta a la ALU con 3 bits (010, 110, etc.), mientras que la tabla formal de ALU Control en la Diapositiva 23 utiliza códigos de 4 bits (0010, 0110, 0000, 0001, 0111).',
-    solutionApplied: 'Se adoptan formalmente los 4 bits de la tabla de la Diapositiva 23 (0010 para ADD, 0110 para SUB, etc.) y se muestra en la inspección la correlación directa con los 3 bits menos significativos del diagrama RTL.'
+    sourceRef: 'Diagrama RTL vs Tabla ALU Control',
+    detectedIssue: 'El Diagrama RTL principal dibuja la línea de control que alimenta a la ALU con 3 bits (010, 110, etc.), mientras que la tabla formal de ALU Control utiliza códigos de 4 bits (0010, 0110, 0000, 0001, 0111).',
+    solutionApplied: 'Se adoptan formalmente los 4 bits de la tabla formal (0010 para ADD, 0110 para SUB, etc.) y se muestra en la inspección la correlación directa con los 3 bits menos significativos del diagrama RTL.'
   },
   {
     id: 'sw_semantics_slide27',
-    title: 'Título y Sintaxis de SW en Diapositiva 27',
-    slideRef: 'Diapositiva 27 (Instrucción SW)',
-    detectedIssue: 'La Diapositiva 27 duplica por error tipográfico el título y formato de LW ("LW $RT, $RS, #offset").',
+    title: 'Título y Sintaxis de SW',
+    sourceRef: 'Instrucción SW',
+    detectedIssue: 'En algunos materiales de referencia se duplica por error tipográfico el título y formato de LW ("LW $RT, $RS, #offset").',
     solutionApplied: 'Se implementa la semántica y sintaxis formal correcta de Store Word: "sw $rt, offset($rs)" con transferencia "memory[GPR[rs] + offset] ← GPR[rt]" (flujo inverso a LW).'
   },
   {
     id: 'slide25_syntax_error',
-    title: 'Sintaxis de LW en Diapositiva 25 (Set de Instrucciones)',
-    slideRef: 'Diapositiva 25',
-    detectedIssue: 'En el resumen del conjunto de instrucciones de la Diapositiva 25, la fila de LW tiene copiada la sintaxis de suma: "Add $rd, $rs, $rt".',
+    title: 'Sintaxis de LW en Resumen del Conjunto de Instrucciones',
+    sourceRef: 'Instrucción LW',
+    detectedIssue: 'En el resumen del conjunto de instrucciones, la fila de LW tenía copiada la sintaxis de suma: "Add $rd, $rs, $rt".',
     solutionApplied: 'Se corrige visualmente mostrando la sintaxis real de Tipo I para cargas: "lw $rt, offset($rs)".'
   }
 ]
@@ -85,7 +85,7 @@ export const DiscrepancyNotice: React.FC<DiscrepancyNoticeProps> = ({ filterId }
                   {item.title}
                 </span>
                 <span className="font-mono text-[10px] text-amber-300/80 bg-amber-950/60 px-2 py-0.5 rounded border border-amber-800/40">
-                  {item.slideRef}
+                  {item.sourceRef}
                 </span>
               </div>
               <p className="text-slate-300 leading-relaxed text-[11px]">

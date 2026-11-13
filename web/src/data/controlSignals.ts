@@ -1,5 +1,5 @@
 // ============================================================================
-// Datos de la Unidad de Control (Diapositivas 18, 19, 23, 24)
+// Datos de la Unidad de Control
 // Arquitectura de Computadoras - MIPS 32-bit
 // ============================================================================
 
@@ -12,7 +12,7 @@ export interface SignalTooltip {
   whenOne: string
   whenX?: string
   description: string
-  slide17Note?: string
+  discrepancyNote?: string
 }
 
 export const CONTROL_SIGNALS_INFO: Record<string, SignalTooltip> = {
@@ -54,7 +54,7 @@ export const CONTROL_SIGNALS_INFO: Record<string, SignalTooltip> = {
     whenZero: 'No se modifica ningún registro del Banco de Registros.',
     whenOne: 'El dato en DW se escribe en el registro AW en el flanco de subida del reloj.',
     description: 'Permite la escritura en el Banco de Registros.',
-    slide17Note: 'DISCREPANCIA: En el Diagrama RTL principal aparece etiquetada como "en_BR" (Enable Banco de Registros), mientras que en las diapositivas 18 a 22 se le llama "RegWrite". Son exactamente la misma señal lógica.'
+    discrepancyNote: 'NOTA: En el Diagrama RTL principal aparece etiquetada como "en_BR" (Enable Banco de Registros), mientras que en la nomenclatura estándar se le llama "RegWrite". Son exactamente la misma señal lógica.'
   },
   MemRead: {
     name: 'MemRead',
@@ -103,7 +103,7 @@ export const CONTROL_SIGNALS_INFO: Record<string, SignalTooltip> = {
   }
 }
 
-// Diapositiva 19: Tabla de Señales de Control
+// Tabla de Señales de Control
 export interface ControlMatrixRow {
   instruction: string
   label: string
@@ -204,7 +204,7 @@ export const CONTROL_SIGNALS_MATRIX: ControlMatrixRow[] = [
   }
 ]
 
-// Diapositiva 24: Tabla de Verdad de la Unidad de Control
+// Tabla de Verdad de la Unidad de Control
 export interface TruthTableRow {
   instruction: string
   op5: string
@@ -251,14 +251,14 @@ export const TRUTH_TABLE_OPCODES: TruthTableRow[] = [
   }
 ]
 
-// Diapositiva 23: Tabla de ALU Control (4 bits según diapositiva 23)
+// Tabla de ALU Control (Códigos de 4 bits y 3 bits)
 export interface AluControlTableRow {
   instruction: string
   aluOp: string
   funct: string
   action: string
   aluControl4Bit: string
-  aluControl3BitSlide17: string
+  aluControl3BitRTL: string
   description: string
 }
 
@@ -269,7 +269,7 @@ export const ALU_CONTROL_TABLE: AluControlTableRow[] = [
     funct: 'XXXXXX',
     action: 'add',
     aluControl4Bit: '0010',
-    aluControl3BitSlide17: '010',
+    aluControl3BitRTL: '010',
     description: 'Suma el registro base con el offset para calcular la dirección efectiva.'
   },
   {
@@ -278,7 +278,7 @@ export const ALU_CONTROL_TABLE: AluControlTableRow[] = [
     funct: 'XXXXXX',
     action: 'add',
     aluControl4Bit: '0010',
-    aluControl3BitSlide17: '010',
+    aluControl3BitRTL: '010',
     description: 'Suma el registro base con el offset para calcular la dirección de almacenamiento.'
   },
   {
@@ -287,7 +287,7 @@ export const ALU_CONTROL_TABLE: AluControlTableRow[] = [
     funct: 'XXXXXX',
     action: 'subtract',
     aluControl4Bit: '0110',
-    aluControl3BitSlide17: '110',
+    aluControl3BitRTL: '110',
     description: 'Resta ambos registros para verificar igualdad mediante zf = (resultado == 0).'
   },
   {
@@ -296,7 +296,7 @@ export const ALU_CONTROL_TABLE: AluControlTableRow[] = [
     funct: '100000',
     action: 'add',
     aluControl4Bit: '0010',
-    aluControl3BitSlide17: '010',
+    aluControl3BitRTL: '010',
     description: 'Suma aritmética entera de 32 bits entre operandos A y B.'
   },
   {
@@ -305,7 +305,7 @@ export const ALU_CONTROL_TABLE: AluControlTableRow[] = [
     funct: '100010',
     action: 'subtract',
     aluControl4Bit: '0110',
-    aluControl3BitSlide17: '110',
+    aluControl3BitRTL: '110',
     description: 'Resta aritmética entera (A - B).'
   },
   {
@@ -314,7 +314,7 @@ export const ALU_CONTROL_TABLE: AluControlTableRow[] = [
     funct: '100100',
     action: 'AND',
     aluControl4Bit: '0000',
-    aluControl3BitSlide17: '000',
+    aluControl3BitRTL: '000',
     description: 'Operación lógica AND bit a bit.'
   },
   {
@@ -323,7 +323,7 @@ export const ALU_CONTROL_TABLE: AluControlTableRow[] = [
     funct: '100101',
     action: 'OR',
     aluControl4Bit: '0001',
-    aluControl3BitSlide17: '001',
+    aluControl3BitRTL: '001',
     description: 'Operación lógica OR bit a bit.'
   },
   {
@@ -332,7 +332,7 @@ export const ALU_CONTROL_TABLE: AluControlTableRow[] = [
     funct: '101010',
     action: 'set on less than',
     aluControl4Bit: '0111',
-    aluControl3BitSlide17: '111',
+    aluControl3BitRTL: '111',
     description: 'Compara si A < B con signo: entrega 1 si verdadero, 0 si falso.'
   }
 ]
@@ -378,7 +378,7 @@ export const CONTROL_UNIT_QUIZ: QuizQuestion[] = [
   },
   {
     id: 4,
-    question: '¿Qué diferencia existe entre la señal "en_BR" del Diagrama RTL y "RegWrite" de las Diapositivas 18-22?',
+    question: '¿Qué diferencia existe entre la señal "en_BR" del Diagrama RTL y "RegWrite" en la nomenclatura estándar?',
     options: [
       { label: 'A', text: 'Son señales completamente distintas con diferente función', correct: false },
       { label: 'B', text: 'Son exactamente la misma señal de habilitación de escritura en registros con diferente nombre', correct: true },

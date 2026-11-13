@@ -28,7 +28,7 @@ export const TypeJView: React.FC<TypeJViewProps> = ({ theme = 'dark' }) => {
   const [currentPcHex, setCurrentPcHex] = useState<string>('00400014')
   const [targetIndexHex, setTargetIndexHex] = useState<string>('0010008')
 
-  // Bucle Diapositiva 28 (Loop con beq y j)
+  // Bucle (Loop con beq y j)
   const [loopCounter, setLoopCounter] = useState<number>(0)
   const loopTarget = 3
   const [loopActiveLine, setLoopActiveLine] = useState<number>(0)
@@ -47,7 +47,7 @@ export const TypeJView: React.FC<TypeJViewProps> = ({ theme = 'dark' }) => {
   // Concatenación: 4 bits de PC+4 [31:28] + 28 bits de target desplazado
   const finalJumpAddrHex = `${top4BitsHex}${shiftedTargetHex}`
 
-  // Pasos de simulación de Tipo J (Diapositiva 22)
+  // Pasos de simulación de Tipo J
   const stepsData = [
     {
       num: 1,
@@ -109,7 +109,7 @@ export const TypeJView: React.FC<TypeJViewProps> = ({ theme = 'dark' }) => {
     }
   }, [isPlaying, stepsData.length])
 
-  // Simulación del Bucle (Diapositiva 28)
+  // Simulación del Bucle con beq y j
   useEffect(() => {
     let timer: number | null = null
     if (isLoopRunning) {
@@ -156,7 +156,7 @@ export const TypeJView: React.FC<TypeJViewProps> = ({ theme = 'dark' }) => {
               Instrucción Tipo J (Salto Incondicional)
             </h2>
             <span className="text-xs font-mono px-2 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">
-              Diapositiva 22 y 28
+              Salto Directo
             </span>
           </div>
           <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-3xl">
@@ -178,7 +178,7 @@ export const TypeJView: React.FC<TypeJViewProps> = ({ theme = 'dark' }) => {
           <div className="flex items-center gap-2">
             <Binary className="h-4 w-4 text-purple-400" />
             <h3 className="text-sm font-bold text-white font-mono uppercase tracking-wide">
-              Formato de Instrucción Tipo J (Diapositiva 22)
+              Formato de Instrucción Tipo J
             </h3>
           </div>
           <span className="text-xs font-mono text-purple-300">j target_address</span>
@@ -348,7 +348,7 @@ export const TypeJView: React.FC<TypeJViewProps> = ({ theme = 'dark' }) => {
         </div>
       </div>
 
-      {/* 5. EJEMPLO CONECTADO CON LA DIAPOSITIVA 28 (BUCLE CON BEQ Y J) */}
+      {/* 5. EJEMPLO DE BUCLE (BUCLE CON BEQ Y J) */}
       <div className={`p-5 rounded-2xl border ${
         isLight ? 'bg-white border-slate-200' : 'bg-slate-900/80 border-slate-800'
       } space-y-4 shadow-xl`}>
@@ -356,7 +356,7 @@ export const TypeJView: React.FC<TypeJViewProps> = ({ theme = 'dark' }) => {
           <div className="flex items-center gap-2">
             <RefreshCw className="h-5 w-5 text-cyan-400" />
             <h3 className="text-base font-bold text-white font-mono">
-              Ejemplo de Bucle con `beq` y `j` (Diapositiva 28)
+              Ejemplo de Bucle con `beq` y `j`
             </h3>
           </div>
 

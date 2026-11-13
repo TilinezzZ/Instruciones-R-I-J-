@@ -178,10 +178,7 @@ export const DatapathCanvas: React.FC<DatapathCanvasProps> = ({
 
           {/* 1. LEYENDA DEL DATAPATH */}
           <text x="30" y="35" fill="#38bdf8" fontSize="13" fontWeight="bold" fontFamily="monospace" opacity="0.8">
-            ESQUEMA RTL MIPS (32 BITS)
-          </text>
-          <text x="30" y="52" fill="#64748b" fontSize="10" fontFamily="monospace">
-            UN SOLO CICLO · 32 BITS · ARQUITECTURA VON NEUMANN
+            ESQUEMA RTL MIPS
           </text>
 
           {/* 2. CABLES Y BUSES SVG */}

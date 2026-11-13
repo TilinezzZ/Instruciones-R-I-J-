@@ -1,5 +1,5 @@
 // ============================================================================
-// Datos iniciales de la Diapositiva 26 (Tablas de Registros y Memoria)
+// Datos iniciales de Tablas de Registros y Memoria
 // Arquitectura de Computadoras - MIPS 32-bit
 // ============================================================================
 
@@ -14,8 +14,8 @@ export interface MemoryEntry {
   value: number
 }
 
-// Banco de Registros (direcciones 7 a 17 según Diapositiva 26)
-export const SLIDE_26_REGISTERS: RegisterEntry[] = [
+// Banco de Registros (direcciones 7 a 17)
+export const INITIAL_LW_REGISTERS: RegisterEntry[] = [
   { regNumber: 7, regName: '$a3', value: 100 },
   { regNumber: 8, regName: '$t0', value: 125 },
   { regNumber: 9, regName: '$t1', value: 25 },
@@ -29,8 +29,8 @@ export const SLIDE_26_REGISTERS: RegisterEntry[] = [
   { regNumber: 17, regName: '$s1', value: 28 }
 ]
 
-// Memoria de Datos (direcciones 20 a 30 según Diapositiva 26)
-export const SLIDE_26_MEMORY: MemoryEntry[] = [
+// Memoria de Datos (direcciones 20 a 30)
+export const INITIAL_LW_MEMORY: MemoryEntry[] = [
   { address: 20, value: 500 },
   { address: 21, value: 120 },
   { address: 22, value: 700 },
@@ -43,3 +43,7 @@ export const SLIDE_26_MEMORY: MemoryEntry[] = [
   { address: 29, value: 201 },
   { address: 30, value: 200 }
 ]
+
+// Alias retrocompatibles
+export const SLIDE_26_REGISTERS = INITIAL_LW_REGISTERS
+export const SLIDE_26_MEMORY = INITIAL_LW_MEMORY

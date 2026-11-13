@@ -80,7 +80,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
               Unidad de Control
             </h2>
             <span className="text-xs font-mono px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800">
-              Diapositivas 18, 19, 23 y 24
+              Decodificador Principal
             </span>
           </div>
           <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-3xl">
@@ -114,7 +114,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
       {/* 2. Aviso de Discrepancias Académicas (en_BR vs RegWrite, 3 vs 4 bits) */}
       <DiscrepancyNotice />
 
-      {/* 3. Diagrama Visual Interactivo de la Unidad de Control (Diapositiva 18) */}
+      {/* 3. Diagrama Visual Interactivo de la Unidad de Control */}
       <div className={`p-5 rounded-2xl border ${
         isLight ? 'bg-white border-slate-200' : 'bg-slate-900/80 border-slate-800'
       } space-y-4 shadow-xl`}>
@@ -122,7 +122,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
           <div className="flex items-center gap-2">
             <Sparkles className="h-4 w-4 text-cyan-400" />
             <h3 className="text-sm font-bold text-white font-mono uppercase tracking-wide">
-              Diagrama de Bloque RTL de la Unidad de Control (Diapositiva 18)
+              Diagrama de Bloque RTL de la Unidad de Control
             </h3>
           </div>
           <span className="text-xs text-slate-400">
@@ -159,7 +159,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
               UNIDAD DE CONTROL
             </text>
             <text x="320" y="80" fill="#38bdf8" fontSize="10" fontFamily="monospace" textAnchor="middle">
-              Control Unit · Diapositiva 18
+              Control Unit RTL
             </text>
 
             {/* Señales de salida a la derecha */}
@@ -268,15 +268,15 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
             </div>
           </div>
 
-          {activeSignalTooltip.slide17Note && (
+          {activeSignalTooltip.discrepancyNote && (
             <p className="text-[11px] text-amber-300/90 bg-amber-950/40 p-2 rounded-lg border border-amber-800/40 font-mono">
-              📌 {activeSignalTooltip.slide17Note}
+              📌 {activeSignalTooltip.discrepancyNote}
             </p>
           )}
         </div>
       </div>
 
-      {/* 4. Tabla de Señales de Control (Diapositiva 19) */}
+      {/* 4. Tabla de Señales de Control */}
       <div className={`p-5 rounded-2xl border ${
         isLight ? 'bg-white border-slate-200' : 'bg-slate-900/80 border-slate-800'
       } space-y-3 shadow-xl`}>
@@ -284,7 +284,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
           <div className="flex items-center gap-2">
             <Table2 className="h-4 w-4 text-amber-400" />
             <h3 className="text-sm font-bold text-white font-mono uppercase tracking-wide">
-              Tabla de Señales de Control (Diapositiva 19)
+              Tabla de Señales de Control
             </h3>
           </div>
           <span className="text-xs font-mono text-slate-400">Valores: 0, 1 y X (Don't Care)</span>
@@ -351,9 +351,9 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
         </div>
       </div>
 
-      {/* 5. Tabla de Verdad de Opcodes (Diapositiva 24) y Modo Decodificador */}
+      {/* 5. Tabla de Verdad de Opcodes y Modo Decodificador */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Tabla de Verdad Diapositiva 24 */}
+        {/* Tabla de Verdad con Opcode */}
         <div className={`p-5 rounded-2xl border ${
           isLight ? 'bg-white border-slate-200' : 'bg-slate-900/80 border-slate-800'
         } space-y-3 shadow-xl`}>
@@ -361,7 +361,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
             <div className="flex items-center gap-2">
               <Binary className="h-4 w-4 text-emerald-400" />
               <h3 className="text-sm font-bold text-white font-mono uppercase tracking-wide">
-                Tabla de Verdad con Opcode (Diapositiva 24)
+                Tabla de Verdad con Opcode
               </h3>
             </div>
           </div>
@@ -477,7 +477,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
         </div>
       </div>
 
-      {/* 6. Tabla de ALU Control (Diapositiva 23 - 4 bits) */}
+      {/* 6. Tabla de ALU Control (4 bits) */}
       <div className={`p-5 rounded-2xl border ${
         isLight ? 'bg-white border-slate-200' : 'bg-slate-900/80 border-slate-800'
       } space-y-3 shadow-xl`}>
@@ -485,7 +485,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
           <div className="flex items-center gap-2">
             <Cpu className="h-4 w-4 text-purple-400" />
             <h3 className="text-sm font-bold text-white font-mono uppercase tracking-wide">
-              Tabla de ALU Control (Diapositiva 23 · Códigos de 4 bits)
+              Tabla de ALU Control (Códigos de 4 bits)
             </h3>
           </div>
           <span className="text-[11px] font-mono text-purple-300 bg-purple-950/60 px-2 py-0.5 rounded border border-purple-800/40">
@@ -501,8 +501,8 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
                 <th className="px-3 py-2.5 text-center text-amber-400">ALUOp</th>
                 <th className="px-3 py-2.5 text-center">funct [5:0]</th>
                 <th className="px-3 py-2.5 text-center">Acción ALU</th>
-                <th className="px-3 py-2.5 text-center text-purple-300 font-bold">Control (4 bits · Diap. 23)</th>
-                <th className="px-3 py-2.5 text-center text-slate-400">Control (3 bits · RTL)</th>
+                <th className="px-3 py-2.5 text-center text-purple-300 font-bold">Control (4 bits)</th>
+                <th className="px-3 py-2.5 text-center text-slate-400">Control (3 bits RTL)</th>
                 <th className="px-4 py-2.5">Descripción de la Operación</th>
               </tr>
             </thead>
@@ -516,7 +516,7 @@ export const ControlUnitView: React.FC<ControlUnitViewProps> = ({ theme = 'dark'
                   <td className="px-3 py-2.5 text-center font-bold text-purple-300 bg-purple-950/30">
                     {row.aluControl4Bit}
                   </td>
-                  <td className="px-3 py-2.5 text-center text-slate-400">{row.aluControl3BitSlide17}</td>
+                  <td className="px-3 py-2.5 text-center text-slate-400">{row.aluControl3BitRTL}</td>
                   <td className="px-4 py-2.5 text-slate-300">{row.description}</td>
                 </tr>
               ))}
