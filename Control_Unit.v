@@ -3,9 +3,11 @@ module Control_Unit(
     output RegDst, ALUSrc, MemtoReg, RegWrite,
     output [1:0] ALUOp
 );
-    assign RegDst   = (opcode == 6'b000000) ? 1'b1 : 1'b0;
-    assign ALUSrc   = (opcode == 6'b000000) ? 1'b0 : 1'bx;
-    assign MemtoReg = (opcode == 6'b000000) ? 1'b0 : 1'bx;
-    assign RegWrite = (opcode == 6'b000000) ? 1'b1 : 1'b0;
-    assign ALUOp    = (opcode == 6'b000000) ? 2'b10 : 2'b00; 
+    wire is_r = (opcode == 6'b000000);
+
+    assign RegDst   = is_r;
+    assign ALUSrc   = 1'b0;
+    assign MemtoReg = 1'b0;
+    assign RegWrite = is_r;
+    assign ALUOp    = is_r ? 2'b10 : 2'b00;
 endmodule

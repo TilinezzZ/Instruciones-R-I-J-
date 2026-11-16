@@ -1,4 +1,4 @@
-{C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v} {1 {vlog -work work -stats=none {C:\Users\ethan\OneDrive\Escritorio\Instrucciones tipo R\tb_MIPS_Datapath_R.v}
+{C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v} {1 {vlog -work work -stats=none {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module tb_MIPS_Datapath_R
 
@@ -18,6 +18,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 
 Top level modules:
 	ALU
+
+} {} {}} {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/PC_Register.v} {1 {vlog -work work -stats=none {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/PC_Register.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PC_Register
+
+Top level modules:
+	PC_Register
 
 } {} {}} {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Mux2x1_32bit.v} {1 {vlog -work work -stats=none {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Mux2x1_32bit.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
