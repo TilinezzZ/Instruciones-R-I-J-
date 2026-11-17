@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Users/ethan/OneDrive/Escritorio/Arquitectura compu/Banco
 vALU
-Z0 !s110 1794874225
+Z0 !s110 1794943524
 !i10b 1
 !s100 aC;k@JX5z[aOU2;c=:`za3
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -20,13 +20,13 @@ Z3 dC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R
 w1794873188
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/ALU.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/ALU.v
-!i122 23
+!i122 43
 L0 1 19
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1794874225.000000
+Z5 !s108 1794943524.000000
 !s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/ALU.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/ALU.v|
 !i113 1
@@ -44,7 +44,7 @@ R3
 w1794873171
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/ALU_Control.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/ALU_Control.v
-!i122 24
+!i122 44
 L0 1 20
 R4
 r1
@@ -68,7 +68,7 @@ R3
 w1794873145
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Control_Unit.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Control_Unit.v
-!i122 25
+!i122 45
 L0 1 13
 R4
 r1
@@ -82,23 +82,23 @@ R6
 R7
 n@control_@unit
 vInstruction_Memory
-Z8 !s110 1794874227
+Z8 !s110 1794943525
 !i10b 1
-!s100 8216WN1E^5O@kD<MmZ`AD0
+!s100 :dU^2h1`T;7G>4BY:4C3O1
 R1
-Io?S;nTJGO`o5mjD:c4X7H2
+I>4M^R`i4NJzX3`dUXg2h93
 R2
 R3
-w1794874122
+w1794942752
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Instruction_Memory.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Instruction_Memory.v
-!i122 31
-L0 1 27
+!i122 51
+L0 1 21
 R4
 r1
 !s85 0
 31
-Z9 !s108 1794874226.000000
+Z9 !s108 1794943525.000000
 !s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Instruction_Memory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Instruction_Memory.v|
 !i113 1
@@ -116,7 +116,7 @@ R3
 w1794874189
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/MIPS_Datapath_R.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/MIPS_Datapath_R.v
-!i122 26
+!i122 46
 L0 1 68
 R4
 r1
@@ -130,7 +130,7 @@ R6
 R7
 n@m@i@p@s_@datapath_@r
 vMux2x1_32bit
-Z10 !s110 1794874226
+R8
 !i10b 1
 !s100 Y04gBXd<E7cWGl=I2?KFK1
 R1
@@ -140,13 +140,13 @@ R3
 w1794873223
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Mux2x1_32bit.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Mux2x1_32bit.v
-!i122 28
-Z11 L0 1 7
+!i122 48
+Z10 L0 1 7
 R4
 r1
 !s85 0
 31
-R9
+R5
 !s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Mux2x1_32bit.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Mux2x1_32bit.v|
 !i113 1
@@ -154,7 +154,7 @@ R6
 R7
 n@mux2x1_32bit
 vMux2x1_5bit
-R10
+R0
 !i10b 1
 !s100 lH4?c`4d2kPaeY;^gR^Hg3
 R1
@@ -164,8 +164,8 @@ R3
 w1794873206
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Mux2x1_5bit.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Mux2x1_5bit.v
-!i122 27
-R11
+!i122 47
+R10
 R4
 r1
 !s85 0
@@ -178,7 +178,7 @@ R6
 R7
 n@mux2x1_5bit
 vPC_Register
-R10
+R8
 !i10b 1
 !s100 JOUA2KXd3Kno3U=1Z[>AT1
 R1
@@ -188,7 +188,7 @@ R3
 w1794873129
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/PC_Register.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/PC_Register.v
-!i122 30
+!i122 50
 L0 1 10
 R4
 r1
@@ -212,13 +212,13 @@ R3
 w1794874169
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Register_File.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Register_File.v
-!i122 32
+!i122 52
 L0 1 41
 R4
 r1
 !s85 0
 31
-!s108 1794874227.000000
+R9
 !s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Register_File.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Register_File.v|
 !i113 1
@@ -226,7 +226,7 @@ R6
 R7
 n@register_@file
 vtb_MIPS_Datapath_R
-R10
+R8
 !i10b 1
 !s100 b@iF==^VOLGg]Lm5BKZZF1
 R1
@@ -236,7 +236,7 @@ R3
 w1794874213
 8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v
 FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v
-!i122 29
+!i122 49
 L0 3 28
 R4
 r1

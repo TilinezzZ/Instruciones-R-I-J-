@@ -1,3 +1,7 @@
+file size instrucciones.txt
+# 2
+file size instrucciones.txt
+# 193
 # Compile of ALU.v was successful.
 # Compile of ALU_Control.v was successful.
 # Compile of Control_Unit.v was successful.
@@ -11,7 +15,7 @@
 # 10 compiles, 0 failed with no errors.
 vsim work.tb_MIPS_Datapath_R
 # vsim work.tb_MIPS_Datapath_R 
-# Start time: 18:10:43 on Nov 16,2026
+# Start time: 13:25:37 on Nov 17,2026
 # Loading work.tb_MIPS_Datapath_R
 # Loading work.MIPS_Datapath_R
 # Loading work.PC_Register
@@ -22,6 +26,7 @@ vsim work.tb_MIPS_Datapath_R
 # Loading work.Mux2x1_32bit
 # Loading work.ALU_Control
 # Loading work.ALU
+# WARNING: No extended dataflow license exists
 add wave -position insertpoint sim:/tb_MIPS_Datapath_R/*
 run
 # T=0 | PC=0 | Instr=01095020 | R1=125 | R2=25 | ALURes=150 | Dest=$10
@@ -34,5 +39,5 @@ run
 #    Time: 60 ns  Iteration: 0  Instance: /tb_MIPS_Datapath_R
 # 1
 # Break in Module tb_MIPS_Datapath_R at C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v line 28
-# End time: 18:12:25 on Nov 16,2026, Elapsed time: 0:01:42
-# Errors: 0, Warnings: 4
+# End time: 13:30:32 on Nov 17,2026, Elapsed time: 0:04:55
+# Errors: 0, Warnings: 2
