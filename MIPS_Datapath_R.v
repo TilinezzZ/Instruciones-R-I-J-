@@ -1,8 +1,13 @@
 module MIPS_Datapath_R(
-    input clk, reset,
-    input [31:0] Instruction, ReadData1, ReadData2,
-    output [31:0] PC_Current, ALUResult, RegWriteData,
+    input clk,
+    input reset,
+    output [31:0] PC_Current,
+    output [31:0] Instruction,
+    output [31:0] ReadData1,
+    output [31:0] ReadData2,
+    output [31:0] ALUResult,
     output [4:0] WriteRegister,
+    output [31:0] RegWriteData,
     output RegWrite
 );
     wire RegDst, ALUSrc, MemtoReg, Zero;
@@ -16,6 +21,11 @@ module MIPS_Datapath_R(
         .PC_Current(PC_Current)
     );
 
+    Instruction_Memory imem (
+        .ReadAddress(PC_Current),
+        .Instruction(Instruction)
+    );
+
     Control_Unit cu (
         .opcode(Instruction[31:26]),
         .RegDst(RegDst), .ALUSrc(ALUSrc), .MemtoReg(MemtoReg),
@@ -25,6 +35,16 @@ module MIPS_Datapath_R(
     Mux2x1_5bit mux_regdst (
         .d0(Instruction[20:16]), .d1(Instruction[15:11]),
         .sel(RegDst), .y(WriteRegister)
+    );
+
+    Register_File reg_file (
+        .clk(clk), .RegWrite(RegWrite),
+        .ReadReg1(Instruction[25:21]),
+        .ReadReg2(Instruction[20:16]),
+        .WriteReg(WriteRegister),
+        .WriteData(RegWriteData),
+        .ReadData1(ReadData1),
+        .ReadData2(ReadData2)
     );
 
     Mux2x1_32bit mux_alusrc (

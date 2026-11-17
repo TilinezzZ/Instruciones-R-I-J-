@@ -6,30 +6,33 @@
 # Compile of Mux2x1_32bit.v was successful.
 # Compile of tb_MIPS_Datapath_R.v was successful.
 # Compile of PC_Register.v was successful.
-# 8 compiles, 0 failed with no errors.
+# Compile of Instruction_Memory.v was successful.
+# Compile of Register_File.v was successful.
+# 10 compiles, 0 failed with no errors.
 vsim work.tb_MIPS_Datapath_R
 # vsim work.tb_MIPS_Datapath_R 
-# Start time: 17:55:15 on Nov 16,2026
+# Start time: 18:10:43 on Nov 16,2026
 # Loading work.tb_MIPS_Datapath_R
 # Loading work.MIPS_Datapath_R
 # Loading work.PC_Register
+# Loading work.Instruction_Memory
 # Loading work.Control_Unit
 # Loading work.Mux2x1_5bit
+# Loading work.Register_File
 # Loading work.Mux2x1_32bit
 # Loading work.ALU_Control
 # Loading work.ALU
 add wave -position insertpoint sim:/tb_MIPS_Datapath_R/*
 run
-# T=0 | PC=0 | ALURes=0 | Dest=0 | RegWrite=1
-# T=10000 | PC=0 | ALURes=25 | Dest=10 | RegWrite=1
-# T=15000 | PC=4 | ALURes=25 | Dest=10 | RegWrite=1
-# T=20000 | PC=4 | ALURes=20 | Dest=11 | RegWrite=1
-# T=25000 | PC=8 | ALURes=20 | Dest=11 | RegWrite=1
-# T=30000 | PC=8 | ALURes=8 | Dest=12 | RegWrite=1
-# T=35000 | PC=12 | ALURes=8 | Dest=12 | RegWrite=1
-# ** Note: $finish    : C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v(39)
-#    Time: 40 ns  Iteration: 1  Instance: /tb_MIPS_Datapath_R
+# T=0 | PC=0 | Instr=01095020 | R1=125 | R2=25 | ALURes=150 | Dest=$10
+# T=15000 | PC=4 | Instr=01095822 | R1=125 | R2=25 | ALURes=100 | Dest=$11
+# T=25000 | PC=8 | Instr=01096024 | R1=125 | R2=25 | ALURes=25 | Dest=$12
+# T=35000 | PC=12 | Instr=01096825 | R1=125 | R2=25 | ALURes=125 | Dest=$13
+# T=45000 | PC=16 | Instr=0128702a | R1=25 | R2=125 | ALURes=1 | Dest=$14
+# T=55000 | PC=20 | Instr=00000000 | R1=0 | R2=0 | ALURes=0 | Dest=$0
+# ** Note: $finish    : C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v(28)
+#    Time: 60 ns  Iteration: 0  Instance: /tb_MIPS_Datapath_R
 # 1
-# Break in Module tb_MIPS_Datapath_R at C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v line 39
-# End time: 17:58:53 on Nov 16,2026, Elapsed time: 0:03:38
-# Errors: 0, Warnings: 2
+# Break in Module tb_MIPS_Datapath_R at C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/tb_MIPS_Datapath_R.v line 28
+# End time: 18:12:25 on Nov 16,2026, Elapsed time: 0:01:42
+# Errors: 0, Warnings: 4
