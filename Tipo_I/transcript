@@ -1,0 +1,81 @@
+# Compile of PC_Register.v was successful.
+# Compile of Instruction_Memory.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Sign_Extend.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Control_Unit.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of ALU.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Mux2x1_5bit.v was successful.
+# Compile of Mux2x1_32bit.v was successful.
+# Compile of MIPS_Datapath_I.v was successful.
+# Compile of tb_MIPS_Datapath_I.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim work.tb_MIPS_Datapath_I
+# vsim work.tb_MIPS_Datapath_I 
+# Start time: 14:10:41 on Nov 17,2026
+# Loading work.tb_MIPS_Datapath_I
+# Loading work.MIPS_Datapath_I
+# Loading work.PC_Register
+# Loading work.Instruction_Memory
+# Loading work.Control_Unit
+# Loading work.Mux2x1_5bit
+# Loading work.Register_File
+# Loading work.Sign_Extend
+# ** Error: (vsim-3033) Instantiation of 'Shift_Left_2' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_MIPS_Datapath_I/uut File: C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I/MIPS_Datapath_I.v Line: 63
+#         Searched libraries:
+#             C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I/work
+# Loading work.Mux2x1_32bit
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+# Error loading design
+# End time: 14:10:42 on Nov 17,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 18
+# Compile of PC_Register.v was successful.
+# Compile of Instruction_Memory.v was successful.
+# Compile of Register_File.v was successful.
+# Compile of Sign_Extend.v was successful.
+# Compile of Shift_Left_2.v was successful.
+# Compile of Control_Unit.v was successful.
+# Compile of ALU_Control.v was successful.
+# Compile of ALU.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Mux2x1_5bit.v was successful.
+# Compile of Mux2x1_32bit.v was successful.
+# Compile of MIPS_Datapath_I.v was successful.
+# Compile of tb_MIPS_Datapath_I.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim work.tb_MIPS_Datapath_I
+# vsim work.tb_MIPS_Datapath_I 
+# Start time: 14:13:44 on Nov 17,2026
+# Loading work.tb_MIPS_Datapath_I
+# Loading work.MIPS_Datapath_I
+# Loading work.PC_Register
+# Loading work.Instruction_Memory
+# Loading work.Control_Unit
+# Loading work.Mux2x1_5bit
+# Loading work.Register_File
+# Loading work.Sign_Extend
+# Loading work.Shift_Left_2
+# Loading work.Mux2x1_32bit
+# Loading work.ALU_Control
+# Loading work.ALU
+# Loading work.Data_Memory
+add wave -position insertpoint endmodule
+# ** UI-Msg: (vish-4014) No objects found matching 'endmodule'.
+add wave -position insertpoint sim:/tb_MIPS_Datapath_I/*
+run
+# T=0 | PC=0 | Instr=8e080002 | ALU=26 | MemRd=345 | RegWrData=345 | Dest=$8 | PCSrc=0
+run
+# T=15000 | PC=4 | Instr=ae290002 | ALU=30 | MemRd=0 | RegWrData=30 | Dest=$9 | PCSrc=0
+# T=25000 | PC=8 | Instr=11cf0001 | ALU=0 | MemRd=0 | RegWrData=0 | Dest=$15 | PCSrc=1
+# T=35000 | PC=16 | Instr=292b0032 | ALU=1 | MemRd=0 | RegWrData=1 | Dest=$11 | PCSrc=0
+# T=45000 | PC=20 | Instr=212c000f | ALU=40 | MemRd=0 | RegWrData=40 | Dest=$12 | PCSrc=0
+# T=55000 | PC=24 | Instr=00000000 | ALU=0 | MemRd=0 | RegWrData=0 | Dest=$0 | PCSrc=0
+# ** Note: $finish    : C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I/tb_MIPS_Datapath_I.v(30)
+#    Time: 60 ns  Iteration: 0  Instance: /tb_MIPS_Datapath_I
+# 1
+# Break in Module tb_MIPS_Datapath_I at C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I/tb_MIPS_Datapath_I.v line 30
