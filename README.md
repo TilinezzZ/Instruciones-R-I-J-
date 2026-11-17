@@ -1,44 +1,71 @@
 # 🖥️ Datapath MIPS Monociclo (Instrucciones Tipo R, I y J)
 
-Este repositorio contiene la implementación estructural en Verilog de la ruta de datos (*Datapath*) monociclo síncrona de un procesador MIPS, desarrollada para el **Seminario de Solución de Problemas de Arquitectura de Computadoras** de la Universidad de Guadalajara (CUCEI).
+Este repositorio contiene la implementación estructural en Verilog de la ruta de datos (*Datapath*) monociclo síncrona de un procesador MIPS de 32 bits, desarrollada para el **Seminario de Solución de Problemas de Arquitectura de Computadoras** de la Universidad de Guadalajara (CUCEI).
 
-## 📌 Etapa Actual: Instrucciones Tipo R
-Esta versión implementa la ejecución autónoma y síncrona (`posedge clk`) para las operaciones aritmético-lógicas de **formato R** (`ADD`, `SUB`, `AND`, `OR`, `SLT`).
+## 📌 Estado del Proyecto
 
+* ✅ **Instrucciones Tipo R:** Completado y simulado (`add`, `sub`, `and`, `or`, `slt`).
+* ✅ **Instrucciones Tipo I:** Completado y simulado (`lw`, `sw`, `beq`, `addi`, `slti`).
+* ⏳ **Instrucciones Tipo J / Datapath Completo:** En desarrollo (`j` e integración unificada).
+
+---
 ## ⚙️ Arquitectura y Módulos
 
-El diseño combina elementos secuenciales (sincronizados por flanco de subida) y bloques de lógica combinacional:
+El diseño combina lógica secuencial síncrona (`posedge clk`) y bloques combinacionales alimentados desde un archivo externo de programa en binario (`instrucciones.txt`):
 
-* **`MIPS_Datapath_R.v`**: Archivo *Top-Level* que interconecta toda la ruta de datos.
-* **`PC_Register.v`**: Registro del *Program Counter* que actualiza la dirección de instrucción en cada `posedge clk` o la reinicia a `0` con `reset`.
-* **`Instruction_Memory.v`**: Memoria ROM precargada con el programa de prueba en lenguaje máquina (32 bits por instrucción).
-* **`Register_File.v`**: Banco de 32 registros de propósito general con lectura combinacional, escritura síncrona en `posedge clk` y valores iniciales precargados (`$7` a `$17`).
-* **`Control_Unit.v`**: Unidad de control que activa `RegDst`, `RegWrite` y `ALUOp` (`10`) al detectar el *opcode* de Tipo R (`000000`).
-* **`ALU_Control.v`**: Decodificador que interpreta `ALUOp` y el campo `funct` para seleccionar la operación exacta de la ALU.
-* **`ALU.v`**: Unidad Lógico Aritmética que ejecuta `ADD`, `SUB`, `AND`, `OR` y `SLT`, además de generar la bandera `Zero`.
-* **`Mux2x1_5bit.v` / `Mux2x1_32bit.v`**: Multiplexores para la selección del registro destino (`rd`) y ruteo de datos hacia la ALU y el banco de registros.
+### Módulos Base (Compartidos en `Tipo_R` y `Tipo_I`)
+* **`PC_Register.v`**: Contador de programa síncrono de 32 bits con reinicio (`reset`) a la dirección `0`.
+* **`Instruction_Memory.v`**: Memoria ROM de 64 palabras que carga el código máquina automáticamente desde `instrucciones.txt` mediante `$readmemb`.
+* **`Register_File.v`**: Banco de 32 registros de propósito general con lectura combinacional, escritura síncrona en `posedge clk`, protección de solo lectura en `$0` y valores iniciales precargados (`$7` a `$17`).
+* **`ALU.v` / `ALU_Control.v`**: Unidad Lógico Aritmética de 32 bits con bandera `Zero` y decodificador de operaciones (`ADD`, `SUB`, `AND`, `OR`, `SLT` con signo).
+* **`Mux2x1_5bit.v` / `Mux2x1_32bit.v`**: Multiplexores para selección de registro destino (`RegDst`), operandos (`ALUSrc`), escritura desde memoria (`MemtoReg`) y salto condicional (`PCSrc`).
+
+### Módulos Incorporados en `Tipo_I`
+* **`MIPS_Datapath_I.v`**: Archivo *Top-Level* que interconecta la ruta de datos para acceso a memoria y bifurcaciones.
+* **`Control_Unit.v`**: Unidad de control ampliada para decodificar `lw`, `sw`, `beq`, `addi`, `slti` y formato R, generando `RegDst`, `ALUSrc`, `MemtoReg`, `RegWrite`, `MemRead`, `MemWrite`, `Branch` y `ALUOp`.
+* **`Data_Memory.v`**: Memoria RAM de 256 palabras con lectura combinacional (`MemRead`), escritura síncrona (`MemWrite`) y datos iniciales precargados en las direcciones `20` a `30`.
+* **`Sign_Extend.v`**: Extensor de signo de 16 a 32 bits para desplazamientos e inmediatos.
+* **`Shift_Left_2.v`**: Desplazador de 2 bits a la izquierda para calcular la dirección relativa de salto en `beq`.
+
+---
 
 ## 🛠️ Herramientas Utilizadas
 * **Lenguaje:** Verilog HDL
 * **Simulador:** ModelSim
 
-## 🚀 Cómo simular el proyecto
+---
 
-1. Clona este repositorio o descarga los archivos `.v` localmente.
-2. Crea un nuevo proyecto en **ModelSim** y añade todos los archivos fuente (`.v`).
-3. Haz clic derecho en el panel de proyecto y selecciona **Compile > Compile All**.
-4. Ve a **Simulate > Start Simulation**, despliega la carpeta `work` y selecciona el banco de pruebas `tb_MIPS_Datapath_R`.
-5. Añade las señales (`clk`, `reset`, `PC_Current`, `Instruction`, `ALUResult`, `WriteRegister`) a la ventana gráfica (**Wave**).
-6. Ejecuta la simulación escribiendo `run -all` en la consola (*Transcript*).
+## 🚀 Cómo simular en ModelSim
 
-## 🧪 Pruebas Automatizadas (Testbench)
+1. Clona este repositorio o descarga los archivos localmente.
+2. Abre **ModelSim** y crea un proyecto apuntando a la carpeta que deseas evaluar (`Tipo_R` o `Tipo_I`).
+3. Añade todos los archivos `.v` de esa carpeta al proyecto y verifica que `instrucciones.txt` esté en el directorio raíz de simulación.
+4. Haz clic derecho en el panel de proyecto y selecciona **Compile > Compile All**.
+5. Ve a **Simulate > Start Simulation**, abre `work` y selecciona el *Testbench* correspondiente (`tb_MIPS_Datapath_R` o `tb_MIPS_Datapath_I`).
+6. Añade las señales a la ventana gráfica (**Wave**) y ejecuta `run -all` en la consola (*Transcript*).
 
-El archivo `tb_MIPS_Datapath_R.v` genera una señal de reloj con periodo de `10 ns`, aplica un pulso inicial de `reset` y deja correr 5 ciclos de reloj. Con los valores iniciales `$8 = 125` y `$9 = 25`, el procesador ejecuta secuencialmente:
+---
+
+## 🧪 Pruebas Automatizadas (Testbenches)
+
+### 1. Simulación Tipo R (`Tipo_R/tb_MIPS_Datapath_R.v`)
+Con los registros iniciales `$8 = 125` y `$9 = 25`:
 
 | PC | Instrucción | Operación | Resultado (`ALUResult`) | Registro Destino |
-| :--- | :--- | :--- | :---: | :---: |
+| :---: | :--- | :--- | :---: | :---: |
 | `0` | `add $10, $8, $9` | `125 + 25` | `150` | `$10` |
 | `4` | `sub $11, $8, $9` | `125 - 25` | `100` | `$11` |
 | `8` | `and $12, $8, $9` | `125 & 25` | `25` | `$12` |
 | `12` | `or $13, $8, $9` | `125 \| 25` | `125` | `$13` |
 | `16` | `slt $14, $9, $8` | `25 < 125` | `1` | `$14` |
+
+### 2. Simulación Tipo I (`Tipo_I/tb_MIPS_Datapath_I.v`)
+Con `$9 = 25`, `$14 = 20`, `$15 = 20`, `$16 = 24`, `$17 = 28` y `mem[26] = 345`:
+
+| PC | Instrucción | Acción | Resultado / Señal Clave |
+| :---: | :--- | :--- | :--- |
+| `0` | `lw $8, 2($16)` | Lee `mem[24 + 2]` (`345`) y guarda en `$8` | `ALUResult = 26`, `MemReadData = 345` |
+| `4` | `sw $9, 2($17)` | Guarda `$9` (`25`) en `mem[28 + 2]` (`mem[30]`) | `ALUResult = 30`, `MemWrite = 1` |
+| `8` | `beq $14, $15, 1` | Compara `20 == 20` y salta a `PC = 16` | `PCSrc = 1` (evade `PC = 12`) |
+| `16` | `slti $11, $9, 50` | Evalúa si `25 < 50` y guarda en `$11` | `ALUResult = 1`, `WriteRegister = $11` |
+| `20` | `addi $12, $9, 15` | Suma `25 + 15` y guarda en `$12` | `ALUResult = 40`, `WriteRegister = $12` |
