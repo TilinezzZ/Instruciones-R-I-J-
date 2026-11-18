@@ -1,0 +1,275 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I
+vALU
+Z0 !s110 1795013832
+!i10b 1
+!s100 aC;k@JX5z[aOU2;c=:`za3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IMX<bfH6z18KX572M8Ecn]1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J
+w1794873188
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/ALU.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/ALU.v
+!i122 2
+L0 1 19
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1795013832.000000
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/ALU.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/ALU.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@a@l@u
+vALU_Control
+Z8 !s110 1795013833
+!i10b 1
+!s100 HJmSbB6n5[LO^7kRn?E:n1
+R1
+IcA8MSCGfmj6_1z3l7dnN=1
+R2
+R3
+w1794873171
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/ALU_Control.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/ALU_Control.v
+!i122 3
+L0 1 20
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/ALU_Control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/ALU_Control.v|
+!i113 1
+R6
+R7
+n@a@l@u_@control
+vControl_Unit
+Z9 !s110 1795013834
+!i10b 1
+!s100 FaGmg?KgkDB8LSTn1mPXS1
+R1
+I]JKQX6QUAh19j7A9e9L;A1
+R2
+R3
+w1795013651
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Control_Unit.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Control_Unit.v
+!i122 8
+L0 1 29
+R4
+r1
+!s85 0
+31
+Z10 !s108 1795013834.000000
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Control_Unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Control_Unit.v|
+!i113 1
+R6
+R7
+n@control_@unit
+vInstruction_Memory
+R8
+!i10b 1
+!s100 :dU^2h1`T;7G>4BY:4C3O1
+R1
+Io9VX=QTcd8>c<bGl`E<[C3
+R2
+R3
+w1794942752
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Instruction_Memory.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Instruction_Memory.v
+!i122 4
+L0 1 21
+R4
+r1
+!s85 0
+31
+Z11 !s108 1795013833.000000
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Instruction_Memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Instruction_Memory.v|
+!i113 1
+R6
+R7
+n@instruction_@memory
+vMIPS_Datapath_J
+R9
+!i10b 1
+!s100 mNk7^M5EzEf;GG4HQkZD61
+R1
+IY2eC6I5L]IbXSz_U2eeek1
+R2
+R3
+w1795013702
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/MIPS_Datapath_J.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/MIPS_Datapath_J.v
+!i122 9
+L0 1 84
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/MIPS_Datapath_J.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/MIPS_Datapath_J.v|
+!i113 1
+R6
+R7
+n@m@i@p@s_@datapath_@j
+vMux2x1_32bit
+R8
+!i10b 1
+!s100 Y04gBXd<E7cWGl=I2?KFK1
+R1
+Ig<HY7oVEWd:^^h35f8f[B1
+R2
+R3
+w1794873223
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Mux2x1_32bit.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Mux2x1_32bit.v
+!i122 6
+Z12 L0 1 7
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Mux2x1_32bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Mux2x1_32bit.v|
+!i113 1
+R6
+R7
+n@mux2x1_32bit
+vMux2x1_5bit
+R8
+!i10b 1
+!s100 lH4?c`4d2kPaeY;^gR^Hg3
+R1
+I9Q6f<7PE]LWNV>Qjd`>_^0
+R2
+R3
+w1794873206
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Mux2x1_5bit.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Mux2x1_5bit.v
+!i122 5
+R12
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Mux2x1_5bit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Mux2x1_5bit.v|
+!i113 1
+R6
+R7
+n@mux2x1_5bit
+vPC_Register
+R0
+!i10b 1
+!s100 JOUA2KXd3Kno3U=1Z[>AT1
+R1
+I1f=fViNzG2Fca;@?Om=@A2
+R2
+R3
+w1794873129
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/PC_Register.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/PC_Register.v
+!i122 1
+L0 1 10
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/PC_Register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/PC_Register.v|
+!i113 1
+R6
+R7
+n@p@c_@register
+vRegister_File
+R8
+!i10b 1
+!s100 4@d<5VUk@KH^n@KPienn21
+R1
+IK]Y5lVIMFb:;GdzFLe`AN1
+R2
+R3
+w1794874169
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Register_File.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Register_File.v
+!i122 7
+L0 1 41
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Register_File.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Register_File.v|
+!i113 1
+R6
+R7
+n@register_@file
+vShift_Left_2_Jump
+R0
+!i10b 1
+!s100 GC:]fMJ[kKGY[eQNX2FfU3
+R1
+I_173@>]HPgDzhSYB7ZKHn2
+R2
+R3
+w1795013618
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Shift_Left_2_Jump.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Shift_Left_2_Jump.v
+!i122 0
+L0 1 6
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Shift_Left_2_Jump.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/Shift_Left_2_Jump.v|
+!i113 1
+R6
+R7
+n@shift_@left_2_@jump
+vtb_MIPS_Datapath_J
+R9
+!i10b 1
+!s100 XQ8Z:?XdjF]aLZ?XWEkfH2
+R1
+I0gZ;A16:[XQV_XMbz?JTI2
+R2
+R3
+w1795013732
+8C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/tb_MIPS_Datapath_J.v
+FC:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/tb_MIPS_Datapath_J.v
+!i122 10
+L0 3 31
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/tb_MIPS_Datapath_J.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_J/tb_MIPS_Datapath_J.v|
+!i113 1
+R6
+R7
+ntb_@m@i@p@s_@datapath_@j

@@ -68,6 +68,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	PC_Register
 
+} {} {}} {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I/Sign_Extend.v} {1 {vlog -work work -stats=none {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I/Sign_Extend.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sign_Extend
+
+Top level modules:
+	Sign_Extend
+
 } {} {}} {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I/Control_Unit.v} {1 {vlog -work work -stats=none {C:/Users/ethan/OneDrive/Escritorio/Instrucciones tipo R/Tipo_I/Control_Unit.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Control_Unit
