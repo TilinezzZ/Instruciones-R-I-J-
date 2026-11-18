@@ -8,7 +8,7 @@ Este directorio documenta el desarrollo y verificación modular del procesador M
 
 Validación de la unidad aritmético-lógica (`ALU`), decodificación de `funct` (`ALU_Control`) y escritura en el banco de registros (`RegDst = 1`, `RegWrite = 1`, `ALUSrc = 0`).
 
-![Simulación Etapa Tipo R](./Tipo%20R.png)
+![Simulación Etapa Tipo R](./Capturas/Tipo%20R.png)
 
 | PC | Instrucción | Operación esperada | Resultado esperado | Resultado observado | Estado |
 | :---: | :--- | :--- | :---: | :---: | :---: |
@@ -24,7 +24,7 @@ Validación de la unidad aritmético-lógica (`ALU`), decodificación de `funct`
 
 Validación de extensión de inmediato, acceso a memoria de datos (`MemRead`, `MemWrite`) y salto condicional (`beq`) mediante comparación de registros.
 
-![Simulación Etapa Tipo I](./Tipo%20I.png)
+![Simulación Etapa Tipo I](./Capturas/Tipo%20I.png)
 
 | PC | Instrucción | Acción esperada | Señales / Resultado esperado | Resultado observado | Estado |
 | :---: | :--- | :--- | :--- | :---: | :---: |
@@ -40,7 +40,7 @@ Validación de extensión de inmediato, acceso a memoria de datos (`MemRead`, `M
 
 Validación del desplazamiento de 26 a 28 bits (`Shift_Left_2_Jump`), concatenación con `PC+4[31:28]`, omisión de instrucciones intermedias y autosalto final observable.
 
-![Simulación Etapa Tipo J](./Tipo%20J.png)
+![Simulación Etapa Tipo J](./Capturas/Tipo%20J.png)
 
 | PC | Instrucción | Acción esperada | Señales / Resultado esperado | Resultado observado | Estado |
 | :---: | :--- | :--- | :--- | :---: | :---: |
