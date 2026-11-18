@@ -1,0 +1,13 @@
+{
+  "name": "proy-final-slides",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm --workspace=web run dev",
+    "build": "npm --workspace=web run build",
+    "preview": "npm --workspace=web run preview"
+  }
+}

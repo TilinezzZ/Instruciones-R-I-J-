@@ -1,0 +1,16 @@
+{
+  "name": "MIPS 32-bit Datapath Simulator",
+  "short_name": "MIPS 32-bit",
+  "description": "Rompecabezas interactivo y simulador visual del procesador monociclo MIPS de 32 bits.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
