@@ -1,0 +1,6 @@
+
+# Archivos temporales de ModelSim
+VERIF/work/
+VERIF/modelsim.ini
+VERIF/transcript
+VERIF/*.wlf

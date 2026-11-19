@@ -1,0 +1,36 @@
+﻿======================================================================
+ INICIO SIMULACION MIPS MONOCICLO UNIFICADO (12 INSTR + HALT)
+======================================================================
+Ciclo  1 | PC= 4 (0x04) | Instr=0x34098005 | AW=$ 9 DW=0x00008005 (en=1) | ALU=0x00008005 zf=0 | HALT=0
+Ciclo  2 | PC= 8 (0x08) | Instr=0x200a0004 | AW=$10 DW=0x00000004 (en=1) | ALU=0x00000004 zf=0 | HALT=0
+Ciclo  3 | PC=12 (0x0c) | Instr=0x010a5820 | AW=$11 DW=0x0000000e (en=1) | ALU=0x0000000e zf=0 | HALT=0
+Ciclo  4 | PC=16 (0x10) | Instr=0x010a6022 | AW=$12 DW=0x00000006 (en=1) | ALU=0x00000006 zf=0 | HALT=0
+Ciclo  5 | PC=20 (0x14) | Instr=0x010a6824 | AW=$13 DW=0x00000000 (en=1) | ALU=0x00000000 zf=1 | HALT=0
+Ciclo  6 | PC=24 (0x18) | Instr=0x010a7025 | AW=$14 DW=0x0000000e (en=1) | ALU=0x0000000e zf=0 | HALT=0
+Ciclo  7 | PC=28 (0x1c) | Instr=0x0148782a | AW=$15 DW=0x00000001 (en=1) | ALU=0x00000001 zf=0 | HALT=0
+Ciclo  8 | PC=32 (0x20) | Instr=0x010a8027 | AW=$16 DW=0xfffffff1 (en=1) | ALU=0xfffffff1 zf=0 | HALT=0
+Ciclo  9 | PC=36 (0x24) | Instr=0xad490000 | AW=$ 9 DW=0x00000004 (en=0) | ALU=0x00000004 zf=0 | HALT=0
+Ciclo 10 | PC=40 (0x28) | Instr=0x8d510000 | AW=$17 DW=0x00008005 (en=1) | ALU=0x00000004 zf=0 | HALT=0
+Ciclo 11 | PC=44 (0x2c) | Instr=0x11310001 | AW=$17 DW=0x00000000 (en=0) | ALU=0x00000000 zf=1 | HALT=0
+Ciclo 12 | PC=52 (0x34) | Instr=0x0800000f | AW=$ 0 DW=0x00000000 (en=0) | ALU=0x00000000 zf=1 | HALT=0
+Ciclo 13 | PC=60 (0x3c) | Instr=0x8c140002 | AW=$20 DW=0x00000000 (en=1) | ALU=0x00000002 zf=0 | HALT=1
+Ciclo 14 | PC=60 (0x3c) | Instr=0x8c140002 | AW=$20 DW=0x00000000 (en=1) | ALU=0x00000002 zf=0 | HALT=1
+Ciclo 15 | PC=60 (0x3c) | Instr=0x8c140002 | AW=$20 DW=0x00000000 (en=1) | ALU=0x00000002 zf=0 | HALT=1
+Ciclo 16 | PC=60 (0x3c) | Instr=0x8c140002 | AW=$20 DW=0x00000000 (en=1) | ALU=0x00000002 zf=0 | HALT=1
+----------------------------------------------------------------------
+ VERIFICACION FINAL DE REGISTROS Y MEMORIA BIG-ENDIAN:
+   $8  (addi 10)        = 10 (Esperado: 10)
+   $9  (ori 0x8005)     = 0x00008005 (Esperado: 0x00008005 - ZeroExt)
+   $10 (addi 4)         = 4 (Esperado: 4)
+   $11 (add 10+4)       = 14 (Esperado: 14)
+   $12 (sub 10-4)       = 6 (Esperado: 6)
+   $13 (and 10&4)       = 0 (Esperado: 0)
+   $14 (or  10|4)       = 14 (Esperado: 14)
+   $15 (slt 4<10)       = 1 (Esperado: 1)
+   $16 (nor ~(10|4))    = 0xfffffff1 (Esperado: 0xfffffff1)
+   MEM[4..7] Big-Endian = 00 00 80 05 (Esperado: 00 00 80 05)
+   $17 (lw MEM[4])      = 0x00008005 (Esperado: 0x00008005)
+   $18 (evadido beq)    = 0 (Esperado: 0)
+   $19 (evadido jump)   = 0 (Esperado: 0)
+   PC congelado en HALT = 60 (Esperado: 60) | HALT = 1 (Esperado: 1)
+======================================================================
