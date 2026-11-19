@@ -48,3 +48,30 @@ Validación del desplazamiento de 26 a 28 bits (`Shift_Left_2_Jump`), concatenac
 | `4` | `j 4` | Salta a palabra `4` (`PC = 16`), omitiendo `PC = 8` y `12` | `Jump = 1`, `RegWrite = 0`, `PC_Next = 16` | `PC` brinca directo de `4` a `16` | Correcto |
 | `16` | `or $13, $8, $9` | Ejecuta `125 \| 25` tras aterrizar del salto | `Jump = 0`, `ALUResult = 125`, `Dest = $13` | `125` guardado en `$13` | Correcto |
 | `20` | `j 5` | Autosalto incondicional a palabra `5` (`PC = 20`) | `Jump = 1`, `PC` fijo en `20` | `PC` permanece en `20` | Correcto |
+
+---
+
+## 4. Procesador Monociclo Unificado (12 Instrucciones, Memoria *Big-Endian* y `halt`)
+
+* **Módulos bajo prueba:** `RTL/mips_datapath_top.v` y los 12 submódulos integrados.
+* **Banco de pruebas:** `VERIF/tb_mips_datapath_top.v` ejecutado mediante `VERIF/run_sim.do` con el programa `VERIF/programa.hex` (formato *Big-Endian*, 1 byte por línea).
+* **Registro completo de consola:** [`log_simulacion_unificada.txt`](log_simulacion_unificada.txt).
+
+![Simulación Datapath Unificado](Capturas/Datapath_Unificado.png)
+
+| PC (Dec / Hex) | Instrucción Ensamblador | Código Máquina | Resultado Esperado | Resultado Observado | Estado |
+| :---: | :--- | :---: | :--- | :--- | :---: |
+| `0` (`0x00`) | `addi $8, $0, 10` | `0x2008000A` | `$8 = 10` (`0x0000000A`) | `$8 = 10` (`0x0000000A`) | Correcto |
+| `4` (`0x04`) | `ori $9, $0, 0x8005` | `0x34098005` | Extensión con ceros (`ZeroExt`): `$9 = 0x00008005` | `$9 = 0x00008005` | Correcto |
+| `8` (`0x08`) | `addi $10, $0, 4` | `0x200A0004` | `$10 = 4` (`0x00000004`) | `$10 = 4` (`0x00000004`) | Correcto |
+| `12` (`0x0C`) | `add $11, $8, $10` | `0x010A5820` | `$11 = 14` (`0x0000000E`) | `$11 = 14` (`0x0000000E`) | Correcto |
+| `16` (`0x10`) | `sub $12, $8, $10` | `0x010A6022` | `$12 = 6` (`0x00000006`) | `$12 = 6` (`0x00000006`) | Correcto |
+| `20` (`0x14`) | `and $13, $8, $10` | `0x010A6824` | `$13 = 0` (`0x00000000`), `zf = 1` | `$13 = 0`, `zf = 1` | Correcto |
+| `24` (`0x18`) | `or $14, $8, $10` | `0x010A7025` | `$14 = 14` (`0x0000000E`) | `$14 = 14` (`0x0000000E`) | Correcto |
+| `28` (`0x1C`) | `slt $15, $10, $8` | `0x0148782A` | `4 < 10` verdadero $\rightarrow$ `$15 = 1` | `$15 = 1` (`0x00000001`) | Correcto |
+| `32` (`0x20`) | `nor $16, $8, $10` | `0x010A8027` | `~(10 \| 4)` $\rightarrow$ `$16 = 0xFFFFFFF1` | `$16 = 0xFFFFFFF1` | Correcto |
+| `36` (`0x24`) | `sw $9, 0($10)` | `0xAD490000` | Escritura *Big-Endian*: `MEM[4..7] = 00 00 80 05` | `MEM[4..7] = 00 00 80 05` | Correcto |
+| `40` (`0x28`) | `lw $17, 0($10)` | `0x8D510000` | Lectura *Big-Endian*: `$17 = 0x00008005` | `$17 = 0x00008005` | Correcto |
+| `44` (`0x2C`) | `beq $9, $17, 1` | `0x11310001` | `zf = 1`, salta `PC = 48` (`$18 = 0`) hacia `PC = 52` | Salta a `PC = 52`, `$18 = 0` | Correcto |
+| `52` (`0x34`) | `j 15` | `0x0800000F` | Salto incondicional a `15 × 4 = 60` (`$19 = 0`) | Salta a `PC = 60`, `$19 = 0` | Correcto |
+| `60` (`0x3C`) | `lw $20, 2($0)` | `0x8C140002` | Dirección desalineada (`2`): `halt = 1`, congela `PC = 60` y bloquea `$20` | `halt = 1`, `PC = 60` congelado (ciclos 13-16), `$20 = 0` | Correcto |
