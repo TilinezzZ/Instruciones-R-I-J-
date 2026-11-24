@@ -1,6 +1,22 @@
-
 # Archivos temporales de ModelSim
 VERIF/work/
 VERIF/modelsim.ini
 VERIF/transcript
 VERIF/*.wlf
+VERIF/test_batch.do
+VERIF/sim.do
+VERIF/resultados/**/work/
+VERIF/resultados/**/modelsim.ini
+VERIF/resultados/**/transcript
+VERIF/resultados/**/*.wlf
+VERIF/resultados/**/sim.do
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node / Web
+node_modules/
+dist/
+.vite/
