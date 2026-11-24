@@ -1,0 +1,5 @@
+DIR   PALABRA(hex)  PALABRA(bin)                       FUENTE
+0000  0x24100002    00100100000100000000000000000010   addi $s0, $zero, 2
+0004  0x24080007    00100100000010000000000000000111   addi $t0, $zero, 7
+0008  0xAE080000    10101110000010000000000000000000   sw   $t0, 0($s0)             # direccion 2 no alineada a 4 -> halt sin escritura
+000C  0x24090001    00100100000010010000000000000001   addi $t1, $zero, 1           # no debe ejecutarse

@@ -1,0 +1,249 @@
+Reading pref.tcl
+
+# 2020.1
+
+# do sim.do
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Copying C:/intelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:49 on Nov 23,2026
+# vlog -work work C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/adder.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/alu.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/alu_control.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/and_gate.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/control_unit.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/data_mem.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/instruction_mem.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/mips_datapath_top.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/mux2to1.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/pc.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/register_file.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/shift_left_2.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/RTL/sign_ext.v C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/VERIF/tb_programa.v 
+# -- Compiling module adder
+# -- Compiling module alu
+# -- Compiling module alu_control
+# -- Compiling module and_gate
+# -- Compiling module control_unit
+# -- Compiling module data_mem
+# -- Compiling module instruction_mem
+# -- Compiling module mips_datapath_top
+# -- Compiling module mux2to1
+# -- Compiling module pc
+# -- Compiling module register_file
+# -- Compiling module shift_left_2
+# -- Compiling module sign_ext
+# -- Compiling module tb_programa
+# 
+# Top level modules:
+# 	tb_programa
+# End time: 22:43:49 on Nov 23,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -onfinish stop work.tb_programa "+CICLOS=80" -do "run -all; quit -f" 
+# Start time: 22:43:49 on Nov 23,2026
+# Loading work.tb_programa
+# Loading work.mips_datapath_top
+# Loading work.pc
+# Loading work.adder
+# Loading work.instruction_mem
+# Loading work.control_unit
+# Loading work.mux2to1
+# Loading work.register_file
+# Loading work.sign_ext
+# Loading work.alu_control
+# Loading work.alu
+# Loading work.data_mem
+# Loading work.shift_left_2
+# Loading work.and_gate
+# run -all
+# TRZ c=1 pc=0 bytes=24080005 word=24080005 op=9 rs=0 rt=8 rd=0 shamt=0 funct=5 imm=5 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000000 DR2=00000000 ALU=00000005 zf=0 MemRd=00000000 DW=00000005 AW=8 | nextPC=4 halt=0
+# EST c=1 AW=8 antes=00000000 despues=00000005 | mem[5] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=4 halt=0
+# TRZ c=2 pc=4 bytes=2409ffff word=2409ffff op=9 rs=0 rt=9 rd=31 shamt=31 funct=63 imm=-1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000000 DR2=00000000 ALU=ffffffff zf=0 MemRd=00000000 DW=ffffffff AW=9 | nextPC=8 halt=0
+# EST c=2 AW=9 antes=00000000 despues=ffffffff | mem[4294967295] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=8 halt=0
+# TRZ c=3 pc=8 bytes=340a8005 word=340a8005 op=13 rs=0 rt=10 rd=16 shamt=0 funct=5 imm=-32763 | RegDst=0 ALU_Src=1 ALU_Op=11 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=1 en_BR=1 | DR1=00000000 DR2=00000000 ALU=00008005 zf=0 MemRd=00000000 DW=00008005 AW=10 | nextPC=12 halt=0
+# EST c=3 AW=10 antes=00000000 despues=00008005 | mem[32773] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=12 halt=0
+# TRZ c=4 pc=12 bytes=01080021 word=01080021 op=0 rs=8 rt=8 rd=0 shamt=0 funct=33 imm=33 | RegDst=1 ALU_Src=0 ALU_Op=10 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000005 DR2=00000005 ALU=0000000a zf=0 MemRd=00000000 DW=0000000a AW=0 | nextPC=16 halt=0
+# EST c=4 AW=0 antes=00000000 despues=00000000 | mem[10] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=16 halt=0
+# TRZ c=5 pc=16 bytes=01085821 word=01085821 op=0 rs=8 rt=8 rd=11 shamt=0 funct=33 imm=22561 | RegDst=1 ALU_Src=0 ALU_Op=10 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000005 DR2=00000005 ALU=0000000a zf=0 MemRd=00000000 DW=0000000a AW=11 | nextPC=20 halt=0
+# EST c=5 AW=11 antes=00000000 despues=0000000a | mem[10] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=20 halt=0
+# TRZ c=6 pc=20 bytes=01686023 word=01686023 op=0 rs=11 rt=8 rd=12 shamt=0 funct=35 imm=24611 | RegDst=1 ALU_Src=0 ALU_Op=10 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=0000000a DR2=00000005 ALU=00000005 zf=0 MemRd=00000000 DW=00000005 AW=12 | nextPC=24 halt=0
+# EST c=6 AW=12 antes=00000000 despues=00000005 | mem[5] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=24 halt=0
+# TRZ c=7 pc=24 bytes=01686824 word=01686824 op=0 rs=11 rt=8 rd=13 shamt=0 funct=36 imm=26660 | RegDst=1 ALU_Src=0 ALU_Op=10 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=0000000a DR2=00000005 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=13 | nextPC=28 halt=0
+# EST c=7 AW=13 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=28 halt=0
+# TRZ c=8 pc=28 bytes=01687025 word=01687025 op=0 rs=11 rt=8 rd=14 shamt=0 funct=37 imm=28709 | RegDst=1 ALU_Src=0 ALU_Op=10 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=0000000a DR2=00000005 ALU=0000000f zf=0 MemRd=00000000 DW=0000000f AW=14 | nextPC=32 halt=0
+# EST c=8 AW=14 antes=00000000 despues=0000000f | mem[15] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=32 halt=0
+# TRZ c=9 pc=32 bytes=0128782a word=0128782a op=0 rs=9 rt=8 rd=15 shamt=0 funct=42 imm=30762 | RegDst=1 ALU_Src=0 ALU_Op=10 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=ffffffff DR2=00000005 ALU=00000001 zf=0 MemRd=00000000 DW=00000001 AW=15 | nextPC=36 halt=0
+# EST c=9 AW=15 antes=00000000 despues=00000001 | mem[1] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=36 halt=0
+# TRZ c=10 pc=36 bytes=24100040 word=24100040 op=9 rs=0 rt=16 rd=0 shamt=1 funct=0 imm=64 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000000 DR2=00000000 ALU=00000040 zf=0 MemRd=00000000 DW=00000040 AW=16 | nextPC=40 halt=0
+# EST c=10 AW=16 antes=00000000 despues=00000040 | mem[64] antes=00000000 despues=00000000 | PC_nuevo=40 halt=0
+# TRZ c=11 pc=40 bytes=ae0b0000 word=ae0b0000 op=43 rs=16 rt=11 rd=0 shamt=0 funct=0 imm=0 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ZeroExt=0 en_BR=0 | DR1=00000040 DR2=0000000a ALU=00000040 zf=0 MemRd=00000000 DW=00000040 AW=11 | nextPC=44 halt=0
+# EST c=11 AW=11 antes=0000000a despues=0000000a | mem[64] antes=00000000 despues=0000000a | PC_nuevo=44 halt=0
+# TRZ c=12 pc=44 bytes=8e110000 word=8e110000 op=35 rs=16 rt=17 rd=0 shamt=0 funct=0 imm=0 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000040 DR2=00000000 ALU=00000040 zf=0 MemRd=0000000a DW=0000000a AW=17 | nextPC=48 halt=0
+# EST c=12 AW=17 antes=00000000 despues=0000000a | mem[64] antes=0000000a despues=0000000a | PC_nuevo=48 halt=0
+# TRZ c=13 pc=48 bytes=122b0001 word=122b0001 op=4 rs=17 rt=11 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=0 ALU_Op=01 MemToReg=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ZeroExt=0 en_BR=0 | DR1=0000000a DR2=0000000a ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=11 | nextPC=56 halt=0
+# EST c=13 AW=11 antes=0000000a despues=0000000a | mem[0] antes=00000000 despues=00000000 | PC_nuevo=56 halt=0
+# TRZ c=14 pc=56 bytes=110b0001 word=110b0001 op=4 rs=8 rt=11 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=0 ALU_Op=01 MemToReg=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ZeroExt=0 en_BR=0 | DR1=00000005 DR2=0000000a ALU=fffffffb zf=0 MemRd=00000000 DW=fffffffb AW=11 | nextPC=60 halt=0
+# EST c=14 AW=11 antes=0000000a despues=0000000a | mem[4294967291] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=60 halt=0
+# TRZ c=15 pc=60 bytes=24130001 word=24130001 op=9 rs=0 rt=19 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000000 DR2=00000000 ALU=00000001 zf=0 MemRd=00000000 DW=00000001 AW=19 | nextPC=64 halt=0
+# EST c=15 AW=19 antes=00000000 despues=00000001 | mem[1] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=64 halt=0
+# TRZ c=16 pc=64 bytes=24140003 word=24140003 op=9 rs=0 rt=20 rd=0 shamt=0 funct=3 imm=3 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000000 DR2=00000000 ALU=00000003 zf=0 MemRd=00000000 DW=00000003 AW=20 | nextPC=68 halt=0
+# EST c=16 AW=20 antes=00000000 despues=00000003 | mem[3] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=68 halt=0
+# TRZ c=17 pc=68 bytes=26b50001 word=26b50001 op=9 rs=21 rt=21 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000000 DR2=00000000 ALU=00000001 zf=0 MemRd=00000000 DW=00000001 AW=21 | nextPC=72 halt=0
+# EST c=17 AW=21 antes=00000000 despues=00000001 | mem[1] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=72 halt=0
+# TRZ c=18 pc=72 bytes=2694ffff word=2694ffff op=9 rs=20 rt=20 rd=31 shamt=31 funct=63 imm=-1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000003 DR2=00000003 ALU=00000002 zf=0 MemRd=00000000 DW=00000002 AW=20 | nextPC=76 halt=0
+# EST c=18 AW=20 antes=00000003 despues=00000002 | mem[2] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=76 halt=0
+# TRZ c=19 pc=76 bytes=12800001 word=12800001 op=4 rs=20 rt=0 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=0 ALU_Op=01 MemToReg=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ZeroExt=0 en_BR=0 | DR1=00000002 DR2=00000000 ALU=00000002 zf=0 MemRd=00000000 DW=00000002 AW=0 | nextPC=80 halt=0
+# EST c=19 AW=0 antes=00000000 despues=00000000 | mem[2] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=80 halt=0
+# TRZ c=20 pc=80 bytes=1000fffc word=1000fffc op=4 rs=0 rt=0 rd=31 shamt=31 funct=60 imm=-4 | RegDst=0 ALU_Src=0 ALU_Op=01 MemToReg=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=68 halt=0
+# EST c=20 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=68 halt=0
+# TRZ c=21 pc=68 bytes=26b50001 word=26b50001 op=9 rs=21 rt=21 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000001 DR2=00000001 ALU=00000002 zf=0 MemRd=00000000 DW=00000002 AW=21 | nextPC=72 halt=0
+# EST c=21 AW=21 antes=00000001 despues=00000002 | mem[2] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=72 halt=0
+# TRZ c=22 pc=72 bytes=2694ffff word=2694ffff op=9 rs=20 rt=20 rd=31 shamt=31 funct=63 imm=-1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000002 DR2=00000002 ALU=00000001 zf=0 MemRd=00000000 DW=00000001 AW=20 | nextPC=76 halt=0
+# EST c=22 AW=20 antes=00000002 despues=00000001 | mem[1] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=76 halt=0
+# TRZ c=23 pc=76 bytes=12800001 word=12800001 op=4 rs=20 rt=0 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=0 ALU_Op=01 MemToReg=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ZeroExt=0 en_BR=0 | DR1=00000001 DR2=00000000 ALU=00000001 zf=0 MemRd=00000000 DW=00000001 AW=0 | nextPC=80 halt=0
+# EST c=23 AW=0 antes=00000000 despues=00000000 | mem[1] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=80 halt=0
+# TRZ c=24 pc=80 bytes=1000fffc word=1000fffc op=4 rs=0 rt=0 rd=31 shamt=31 funct=60 imm=-4 | RegDst=0 ALU_Src=0 ALU_Op=01 MemToReg=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=68 halt=0
+# EST c=24 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=68 halt=0
+# TRZ c=25 pc=68 bytes=26b50001 word=26b50001 op=9 rs=21 rt=21 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000002 DR2=00000002 ALU=00000003 zf=0 MemRd=00000000 DW=00000003 AW=21 | nextPC=72 halt=0
+# EST c=25 AW=21 antes=00000002 despues=00000003 | mem[3] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=72 halt=0
+# TRZ c=26 pc=72 bytes=2694ffff word=2694ffff op=9 rs=20 rt=20 rd=31 shamt=31 funct=63 imm=-1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000001 DR2=00000001 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=20 | nextPC=76 halt=0
+# EST c=26 AW=20 antes=00000001 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=76 halt=0
+# TRZ c=27 pc=76 bytes=12800001 word=12800001 op=4 rs=20 rt=0 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=0 ALU_Op=01 MemToReg=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=84 halt=0
+# EST c=27 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=84 halt=0
+# TRZ c=28 pc=84 bytes=08000017 word=08000017 op=2 rs=0 rt=0 rd=0 shamt=0 funct=23 imm=23 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=92 halt=0
+# EST c=28 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=92 halt=0
+# TRZ c=29 pc=92 bytes=24180001 word=24180001 op=9 rs=0 rt=24 rd=0 shamt=0 funct=1 imm=1 | RegDst=0 ALU_Src=1 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ZeroExt=0 en_BR=1 | DR1=00000000 DR2=00000000 ALU=00000001 zf=0 MemRd=00000000 DW=00000001 AW=24 | nextPC=96 halt=0
+# EST c=29 AW=24 antes=00000000 despues=00000001 | mem[1] antes=xxxxxxxx despues=xxxxxxxx | PC_nuevo=96 halt=0
+# TRZ c=30 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=30 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=31 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=31 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=32 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=32 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=33 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=33 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=34 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=34 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=35 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=35 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=36 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=36 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=37 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=37 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=38 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=38 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=39 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=39 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=40 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=40 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=41 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=41 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=42 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=42 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=43 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=43 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=44 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=44 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=45 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=45 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=46 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=46 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=47 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=47 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=48 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=48 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=49 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=49 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=50 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=50 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=51 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=51 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=52 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=52 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=53 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=53 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=54 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=54 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=55 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=55 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=56 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=56 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=57 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=57 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=58 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=58 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=59 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=59 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=60 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=60 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=61 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=61 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=62 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=62 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=63 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=63 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=64 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=64 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=65 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=65 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=66 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=66 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=67 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=67 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=68 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=68 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=69 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=69 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=70 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=70 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=71 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=71 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=72 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=72 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=73 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=73 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=74 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=74 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=75 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=75 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=76 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=76 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=77 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=77 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=78 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=78 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=79 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=79 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# TRZ c=80 pc=96 bytes=08000018 word=08000018 op=2 rs=0 rt=0 rd=0 shamt=0 funct=24 imm=24 | RegDst=0 ALU_Src=0 ALU_Op=00 MemToReg=0 MemRead=0 MemWrite=0 Branch=0 Jump=1 ZeroExt=0 en_BR=0 | DR1=00000000 DR2=00000000 ALU=00000000 zf=1 MemRd=00000000 DW=00000000 AW=0 | nextPC=96 halt=0
+# EST c=80 AW=0 antes=00000000 despues=00000000 | mem[0] antes=00000000 despues=00000000 | PC_nuevo=96 halt=0
+# FINAL_PC=96 FINAL_HALT=0
+# REG 0=00000000
+# REG 1=00000000
+# REG 2=00000000
+# REG 3=00000000
+# REG 4=00000000
+# REG 5=00000000
+# REG 6=00000000
+# REG 7=00000000
+# REG 8=00000005
+# REG 9=ffffffff
+# REG 10=00008005
+# REG 11=0000000a
+# REG 12=00000005
+# REG 13=00000000
+# REG 14=0000000f
+# REG 15=00000001
+# REG 16=00000040
+# REG 17=0000000a
+# REG 18=00000000
+# REG 19=00000001
+# REG 20=00000000
+# REG 21=00000003
+# REG 22=00000000
+# REG 23=00000000
+# REG 24=00000001
+# REG 25=00000000
+# REG 26=00000000
+# REG 27=00000000
+# REG 28=00000000
+# REG 29=00000000
+# REG 30=00000000
+# REG 31=00000000
+# MEM 64=0000000a
+# ** Note: $finish    : C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/VERIF/tb_programa.v(123)
+#    Time: 806 ns  Iteration: 0  Instance: /tb_programa
+# Break in Module tb_programa at C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/VERIF/tb_programa.v line 123
+# Stopped at C:/Users/darig/OneDrive/Documentos/Instruciones-R-I-J-/VERIF/tb_programa.v line 123
+#  quit -f
+# End time: 22:43:50 on Nov 23,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

@@ -1,0 +1,6 @@
+ERROR linea 2: inmediato de addi fuera de rango (40000); permitido -32768..32767
+ERROR linea 3: mnemonico invalido 'foo'
+ERROR linea 4: registro invalido '$t9x'
+ERROR linea 6: etiqueta duplicada 'dup'
+ERROR linea 7: etiqueta indefinida 'no_existe'
+ERROR linea 8: inmediato de ori fuera de rango (-1); permitido 0..65535
