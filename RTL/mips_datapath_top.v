@@ -1,4 +1,4 @@
-﻿`timescale 1ns / 1ps
+`timescale 1ns / 1ps
 
 module mips_datapath_top (
     input  wire        clk,

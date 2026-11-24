@@ -1,4 +1,4 @@
-﻿`timescale 1ns / 1ps
+`timescale 1ns / 1ps
 
 module alu_control (
     input  wire [1:0] alu_op,
@@ -12,8 +12,8 @@ module alu_control (
             2'b11: alu_ctrl = 3'b001; // ori          -> OR
             2'b10: begin
                 case (funct)
-                    6'b100000: alu_ctrl = 3'b010; // add
-                    6'b100010: alu_ctrl = 3'b110; // sub
+                    6'b100000, 6'b100001: alu_ctrl = 3'b010; // add / addu (funct 20 y 21)
+                    6'b100010, 6'b100011: alu_ctrl = 3'b110; // sub / subu (funct 22 y 23)
                     6'b100100: alu_ctrl = 3'b000; // and
                     6'b100101: alu_ctrl = 3'b001; // or
                     6'b101010: alu_ctrl = 3'b111; // slt

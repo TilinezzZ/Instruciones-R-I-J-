@@ -1,4 +1,4 @@
-﻿`timescale 1ns / 1ps
+`timescale 1ns / 1ps
 
 module sign_ext (
     input  wire [15:0] in,

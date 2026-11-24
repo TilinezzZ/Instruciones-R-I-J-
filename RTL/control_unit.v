@@ -1,4 +1,4 @@
-﻿`timescale 1ns / 1ps
+`timescale 1ns / 1ps
 
 module control_unit (
     input  wire [5:0] op,
@@ -34,8 +34,8 @@ module control_unit (
                 ALU_Op   = 2'b10;
                 MemToReg = 1'b0;
             end
-            // addi
-            6'b001000: begin
+            // addi / addiu (opcode 08 y 09)
+            6'b001000, 6'b001001: begin
                 en_BR    = 1'b1;
                 RegDst   = 1'b0;
                 ALU_Src  = 1'b1;
